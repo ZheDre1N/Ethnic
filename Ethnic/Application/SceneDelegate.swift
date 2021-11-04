@@ -16,7 +16,48 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        // Declaration ViewControllers.
+        let homeVC = HomeViewController()
+        let savedVC = SavedViewController()
+        let settingsVC = SettingsViewController()
+        
+        // Creating Navigation View Controllers.
+        let navigationHomeVC = BaseNavigationController(rootViewController: homeVC)
+        let navigationSavedVC = BaseNavigationController(rootViewController: savedVC)
+        let navigationSettingsVC = BaseNavigationController(rootViewController: settingsVC)
+        let tabBarViewControllers = [navigationHomeVC, navigationSavedVC, navigationSettingsVC]
+
+        
+        // Creating a TabBarController.
+        let tabBarVC = BaseTabBarController()
+        tabBarVC.setViewControllers(tabBarViewControllers, animated: true)
+        
+        // Configure icons and tab names.
+        if let tabBarItem0 = tabBarVC.tabBar.items?[0] {
+            tabBarItem0.title = "Home"
+            tabBarItem0.image = UIImage(systemName: "m.square.fill")
+            tabBarItem0.selectedImage = UIImage(systemName: "m.square")
+        }
+        
+        if let tabBarItem1 = tabBarVC.tabBar.items?[1] {
+            tabBarItem1.title = "Saved"
+            tabBarItem1.image = UIImage(systemName: "m.square.fill")
+            tabBarItem1.selectedImage = UIImage(systemName: "m.square")
+        }
+        
+        if let tabBarItem2 = tabBarVC.tabBar.items?[2] {
+            tabBarItem2.title = "Settings"
+            tabBarItem2.image = UIImage(systemName: "m.square.fill")
+            tabBarItem2.selectedImage = UIImage(systemName: "m.square")
+        }
+        
+        // Configure a window.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = tabBarVC
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
