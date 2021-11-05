@@ -16,15 +16,12 @@ final class HomeViewController: BaseViewController {
     private var targetLanguageButton = BaseButton()
     private var swapLanguagesButton = BaseButton()
     private let languageButtonsHeaderView = UIView()
+    private let additionTranslateButtonsView = UIView()
 
 
     // MARK: - Public variables.
     public let sourceLanguageKey = "rus"
     public let targetLanguageKey = "myv"
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,11 +75,21 @@ final class HomeViewController: BaseViewController {
         }
         
         func configureSourceTextView() {
-        
+            sourceTextView.translatesAutoresizingMaskIntoConstraints = false
+            sourceTextView.backgroundColor = .lightGray
+            view.addSubview(sourceTextView)
+
+            sourceTextView.topAnchor.constraint(equalTo: languageButtonsHeaderView.bottomAnchor).isActive = true
+            sourceTextView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+            sourceTextView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+            sourceTextView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
+            sourceTextView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            
+
         }
         
         func configureAdditionButtonsRow() {
-        
+            
         }
         
     }

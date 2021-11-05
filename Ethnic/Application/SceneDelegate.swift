@@ -28,7 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationSavedVC = BaseNavigationController(rootViewController: savedVC)
         let navigationSettingsVC = BaseNavigationController(rootViewController: settingsVC)
         let tabBarViewControllers = [navigationHomeVC, navigationSavedVC, navigationSettingsVC]
-
         
         // Creating a TabBarController.
         let tabBarVC = BaseTabBarController()
