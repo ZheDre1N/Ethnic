@@ -22,15 +22,14 @@ final class HomeViewController: BaseViewController {
     // MARK: - Public variables.
     public let sourceLanguageKey = "rus"
     public let targetLanguageKey = "myv"
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
-
+    
     // MARK: - ConfigureUI
     private func configureUI() {
-        title = "Home"
         configureLanguageButtonsHeader()
         configureSourceTextView()
         configureAdditionButtonsRow()
@@ -44,7 +43,7 @@ final class HomeViewController: BaseViewController {
             languageButtonsHeaderView.heightAnchor.constraint(equalToConstant: languageButtonsHeaderViewHeight).isActive = true
             languageButtonsHeaderView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
             languageButtonsHeaderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-            languageButtonsHeaderView.backgroundColor = .cyan
+//            languageButtonsHeaderView.backgroundColor = .cyan
             
             // Configure buttons.
             sourceLanguageButton.translatesAutoresizingMaskIntoConstraints = false
