@@ -11,7 +11,7 @@ class SavedViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Saved"
+        title = "Сохраненное"
 
         // Do any additional setup after loading the view.
     }

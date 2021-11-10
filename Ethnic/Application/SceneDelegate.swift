@@ -32,22 +32,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Creating a TabBarController.
         let tabBarVC = BaseTabBarController()
         tabBarVC.setViewControllers(tabBarViewControllers, animated: true)
+        tabBarVC.customizeAppearance()
         
         // Configure icons and tab names.
         if let tabBarItem0 = tabBarVC.tabBar.items?[0] {
-            tabBarItem0.title = "Home"
+            tabBarItem0.title = "Главная"
             tabBarItem0.image = UIImage(systemName: "m.square.fill")
             tabBarItem0.selectedImage = UIImage(systemName: "m.square")
         }
         
         if let tabBarItem1 = tabBarVC.tabBar.items?[1] {
-            tabBarItem1.title = "Saved"
+            tabBarItem1.title = "Сохраненное"
             tabBarItem1.image = UIImage(systemName: "m.square.fill")
             tabBarItem1.selectedImage = UIImage(systemName: "m.square")
         }
         
         if let tabBarItem2 = tabBarVC.tabBar.items?[2] {
-            tabBarItem2.title = "Settings"
+            tabBarItem2.title = "Настройки"
             tabBarItem2.image = UIImage(systemName: "m.square.fill")
             tabBarItem2.selectedImage = UIImage(systemName: "m.square")
         }

@@ -11,8 +11,8 @@ import UIKit
 private struct AppColor {
 
     struct NavigationControllerCollors {
-        static let Opaque = CGFloat()
-        static let SemiOpaque = CGFloat(0.8)
+        static let firstRed = UIColor.red
+        static let secondRed = UIColor.red
         static let SemiTransparent = CGFloat(0.5)
         static let Transparent = CGFloat(0.3)
     }

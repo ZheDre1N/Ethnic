@@ -11,7 +11,7 @@ class SettingsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Settings"
+        title = "Настройки"
 
         // Do any additional setup after loading the view.
     }
