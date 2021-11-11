@@ -37,20 +37,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Configure icons and tab names.
         if let tabBarItem0 = tabBarVC.tabBar.items?[0] {
             tabBarItem0.title = "Главная"
-            tabBarItem0.image = UIImage(systemName: "m.square.fill")
-            tabBarItem0.selectedImage = UIImage(systemName: "m.square")
+            tabBarItem0.image = UIImage(systemName: "character.bubble")
+            tabBarItem0.selectedImage = UIImage(systemName: "character.bubble.fill")
         }
         
         if let tabBarItem1 = tabBarVC.tabBar.items?[1] {
             tabBarItem1.title = "Сохраненное"
-            tabBarItem1.image = UIImage(systemName: "m.square.fill")
-            tabBarItem1.selectedImage = UIImage(systemName: "m.square")
+            tabBarItem1.image = UIImage(systemName: "star")
+            tabBarItem1.selectedImage = UIImage(systemName: "star.fill")
         }
         
         if let tabBarItem2 = tabBarVC.tabBar.items?[2] {
             tabBarItem2.title = "Настройки"
-            tabBarItem2.image = UIImage(systemName: "m.square.fill")
-            tabBarItem2.selectedImage = UIImage(systemName: "m.square")
+            tabBarItem2.image = UIImage(systemName: "gearshape.2")
+            tabBarItem2.selectedImage = UIImage(systemName: "gearshape.2.fill")
         }
         
         // Configure a window.

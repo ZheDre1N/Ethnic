@@ -10,15 +10,15 @@ import UIKit
 final class HomeViewController: BaseViewController {
     
     // MARK: - Private variables.
+    private let scrollView = UIScrollView()
+    private let contentScrollView = UIView()
+    
     private let languageButtonsHeaderView = UIView()
     private var sourceLanguageButton = BaseButton()
     private var swapLanguagesButton = BaseButton()
     private var targetLanguageButton = BaseButton()
     
     private let sourceTextView = BaseTextView()
-    
-    private let scrollView = UIScrollView()
-    private let contentScrollView = UIView()
     private let targetTextView = BaseTextView()
     
     // MARK: - Public variables.
@@ -49,12 +49,21 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - ConfigureUI
     private func configureUI() {
+        
+        // UI constants.
+        let gap: CGFloat = 8
+        let viewCornerRadius:CGFloat = 12
+        
         configureScrollView()
         configureContentScrollView()
         configureLanguageButtonsHeader()
-//        configureSourceTextView()
-//        configureAdditionButtonsRow()
+        configureSourceTextView()
+        configureTargetTextView()
+
         
+        
+
+
         func configureScrollView() {
             view.addSubview(scrollView)
             scrollView.backgroundColor = .secondarySystemBackground
@@ -82,17 +91,32 @@ final class HomeViewController: BaseViewController {
         }
         
         func configureLanguageButtonsHeader() {
-            let height:CGFloat = 50
+            let height:CGFloat = 40
             
             // Configure languageButtonsHeaderView
             contentScrollView.addSubview(languageButtonsHeaderView)
-            languageButtonsHeaderView.backgroundColor = .red
+            languageButtonsHeaderView.backgroundColor = .lightGray
+            languageButtonsHeaderView.layer.cornerRadius = viewCornerRadius
+            languageButtonsHeaderView.layer.borderWidth = 1
+            languageButtonsHeaderView.layer.borderColor = UIColor.gray.cgColor
+            
+            
+//            shadowColor sets the color of the shadow, and needs to be a CGColor.
+//            shadowOpacity sets how transparent the shadow is, where 0 is invisible and 1 is as strong as possible.
+//            shadowOffset sets how far away from the view the shadow should be, to give a 3D offset effect.
+//            shadowRadius sets how wide the shadow should be.
+            languageButtonsHeaderView.layer.shadowColor = UIColor.black.cgColor
+            languageButtonsHeaderView.layer.shadowOpacity = 0.3
+            languageButtonsHeaderView.layer.shadowOffset = .zero
+            languageButtonsHeaderView.layer.shadowRadius = 8
+
+
             
             languageButtonsHeaderView.translatesAutoresizingMaskIntoConstraints = false
             languageButtonsHeaderView.heightAnchor.constraint(equalToConstant: height).isActive = true
-            languageButtonsHeaderView.topAnchor.constraint(equalTo: contentScrollView.topAnchor, constant: 0).isActive = true
-            languageButtonsHeaderView.leftAnchor.constraint(equalTo: contentScrollView.leftAnchor, constant: 0).isActive = true
-            languageButtonsHeaderView.rightAnchor.constraint(equalTo: contentScrollView.rightAnchor, constant: 0).isActive = true
+            languageButtonsHeaderView.topAnchor.constraint(equalTo: contentScrollView.topAnchor, constant: gap).isActive = true
+            languageButtonsHeaderView.leftAnchor.constraint(equalTo: contentScrollView.leftAnchor, constant: gap).isActive = true
+            languageButtonsHeaderView.rightAnchor.constraint(equalTo: contentScrollView.rightAnchor, constant: -gap).isActive = true
 
             
             // Configure buttons.
@@ -102,7 +126,7 @@ final class HomeViewController: BaseViewController {
 
             swapLanguagesButton.translatesAutoresizingMaskIntoConstraints = false
             swapLanguagesButton.setTitle("swap", for: .normal)
-            swapLanguagesButton.backgroundColor = .green
+            swapLanguagesButton.backgroundColor = .gray
             languageButtonsHeaderView.addSubview(swapLanguagesButton)
 
             targetLanguageButton.translatesAutoresizingMaskIntoConstraints = false
@@ -126,18 +150,52 @@ final class HomeViewController: BaseViewController {
         func configureSourceTextView() {
             sourceTextView.translatesAutoresizingMaskIntoConstraints = false
             sourceTextView.backgroundColor = .lightGray
+            sourceTextView.layer.cornerRadius = viewCornerRadius
+            sourceTextView.layer.borderWidth = 1
+            sourceTextView.layer.borderColor = UIColor.gray.cgColor
+            
+            
+//            shadowColor sets the color of the shadow, and needs to be a CGColor.
+//            shadowOpacity sets how transparent the shadow is, where 0 is invisible and 1 is as strong as possible.
+//            shadowOffset sets how far away from the view the shadow should be, to give a 3D offset effect.
+//            shadowRadius sets how wide the shadow should be.
+            sourceTextView.layer.shadowColor = UIColor.black.cgColor
+            sourceTextView.layer.shadowOpacity = 0.3
+            sourceTextView.layer.shadowOffset = .zero
+            sourceTextView.layer.shadowRadius = 8
             view.addSubview(sourceTextView)
             
-            sourceTextView.topAnchor.constraint(equalTo: languageButtonsHeaderView.bottomAnchor, constant: 8).isActive = true
-            sourceTextView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
-            sourceTextView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
-            sourceTextView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
+            sourceTextView.topAnchor.constraint(equalTo: languageButtonsHeaderView.bottomAnchor, constant: gap).isActive = true
+            sourceTextView.leftAnchor.constraint(equalTo: contentScrollView.leftAnchor, constant: gap).isActive = true
+            sourceTextView.rightAnchor.constraint(equalTo: contentScrollView.rightAnchor, constant: -gap).isActive = true
             sourceTextView.heightAnchor.constraint(equalToConstant: 200).isActive = true
             
             
         }
         
-        func configureAdditionButtonsRow() {
+        func configureTargetTextView() {
+            targetTextView.translatesAutoresizingMaskIntoConstraints = false
+            targetTextView.backgroundColor = .lightGray
+            targetTextView.layer.cornerRadius = viewCornerRadius
+            targetTextView.layer.borderWidth = 1
+            targetTextView.layer.borderColor = UIColor.gray.cgColor
+            
+            
+//            shadowColor sets the color of the shadow, and needs to be a CGColor.
+//            shadowOpacity sets how transparent the shadow is, where 0 is invisible and 1 is as strong as possible.
+//            shadowOffset sets how far away from the view the shadow should be, to give a 3D offset effect.
+//            shadowRadius sets how wide the shadow should be.
+            targetTextView.layer.shadowColor = UIColor.black.cgColor
+            targetTextView.layer.shadowOpacity = 0.3
+            targetTextView.layer.shadowOffset = .zero
+            targetTextView.layer.shadowRadius = 8
+            view.addSubview(targetTextView)
+            
+            targetTextView.topAnchor.constraint(equalTo: sourceTextView.bottomAnchor, constant: gap).isActive = true
+            targetTextView.leftAnchor.constraint(equalTo: contentScrollView.leftAnchor, constant: gap).isActive = true
+            targetTextView.rightAnchor.constraint(equalTo: contentScrollView.rightAnchor, constant: -gap).isActive = true
+            targetTextView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+            
             
         }
         

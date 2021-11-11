@@ -16,13 +16,9 @@ class BaseTabBarController: UITabBarController {
     }
     
     func customizeAppearance() {
-        //Set the background color
-//            UITabBar.appearance().backgroundColor = .red
-            tabBar.backgroundImage = UIImage()   //Clear background
-
             //Set the item tint colors
             tabBar.tintColor = .black
-            tabBar.unselectedItemTintColor = .black
+            tabBar.unselectedItemTintColor = .lightGray
     }
     
 
