@@ -95,7 +95,7 @@ final class HomeViewController: BaseViewController {
             
             // Configure languageButtonsHeaderView
             contentScrollView.addSubview(languageButtonsHeaderView)
-            languageButtonsHeaderView.backgroundColor = .lightGray
+            languageButtonsHeaderView.backgroundColor = .white
             languageButtonsHeaderView.layer.cornerRadius = viewCornerRadius
             languageButtonsHeaderView.layer.borderWidth = 1
             languageButtonsHeaderView.layer.borderColor = UIColor.gray.cgColor
@@ -122,15 +122,17 @@ final class HomeViewController: BaseViewController {
             // Configure buttons.
             sourceLanguageButton.translatesAutoresizingMaskIntoConstraints = false
             sourceLanguageButton.setTitle("Русский", for: .normal)
+            sourceLanguageButton.setTitleColor(.black, for: .normal)
             languageButtonsHeaderView.addSubview(sourceLanguageButton)
 
             swapLanguagesButton.translatesAutoresizingMaskIntoConstraints = false
+            swapLanguagesButton.setTitleColor(.black, for: .normal)
             swapLanguagesButton.setTitle("swap", for: .normal)
-            swapLanguagesButton.backgroundColor = .gray
             languageButtonsHeaderView.addSubview(swapLanguagesButton)
 
             targetLanguageButton.translatesAutoresizingMaskIntoConstraints = false
             targetLanguageButton.setTitle("Эрзянский", for: .normal)
+            targetLanguageButton.setTitleColor(.black, for: .normal)
             languageButtonsHeaderView.addSubview(targetLanguageButton)
 
             // Constraint buttons.
@@ -149,7 +151,7 @@ final class HomeViewController: BaseViewController {
         
         func configureSourceTextView() {
             sourceTextView.translatesAutoresizingMaskIntoConstraints = false
-            sourceTextView.backgroundColor = .lightGray
+            sourceTextView.backgroundColor = .white
             sourceTextView.layer.cornerRadius = viewCornerRadius
             sourceTextView.layer.borderWidth = 1
             sourceTextView.layer.borderColor = UIColor.gray.cgColor
@@ -175,7 +177,7 @@ final class HomeViewController: BaseViewController {
         
         func configureTargetTextView() {
             targetTextView.translatesAutoresizingMaskIntoConstraints = false
-            targetTextView.backgroundColor = .lightGray
+            targetTextView.backgroundColor = .white
             targetTextView.layer.cornerRadius = viewCornerRadius
             targetTextView.layer.borderWidth = 1
             targetTextView.layer.borderColor = UIColor.gray.cgColor

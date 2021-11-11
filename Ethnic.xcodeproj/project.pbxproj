@@ -21,11 +21,8 @@
 		18F5BA1827330F030071BEBB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1727330F030071BEBB /* BaseNavigationController.swift */; };
 		18F5BA1A27330F390071BEBB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1927330F390071BEBB /* BaseTabBarController.swift */; };
 		18F5BA1D273311930071BEBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1B273311930071BEBB /* HomeViewController.swift */; };
-		18F5BA1E273311930071BEBB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F5BA1C273311930071BEBB /* HomeViewController.xib */; };
 		18F5BA212733131D0071BEBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1F2733131D0071BEBB /* SettingsViewController.swift */; };
-		18F5BA222733131D0071BEBB /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F5BA202733131D0071BEBB /* SettingsViewController.xib */; };
 		18F5BA27273313450071BEBB /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA25273313450071BEBB /* SavedViewController.swift */; };
-		18F5BA28273313450071BEBB /* SavedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F5BA26273313450071BEBB /* SavedViewController.xib */; };
 		18F5BA32273318CB0071BEBB /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA31273318CB0071BEBB /* BaseButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +43,8 @@
 		18F5BA1727330F030071BEBB /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		18F5BA1927330F390071BEBB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		18F5BA1B273311930071BEBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		18F5BA1C273311930071BEBB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		18F5BA1F2733131D0071BEBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		18F5BA202733131D0071BEBB /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		18F5BA25273313450071BEBB /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
-		18F5BA26273313450071BEBB /* SavedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedViewController.xib; sourceTree = "<group>"; };
 		18F5BA31273318CB0071BEBB /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,7 +258,6 @@
 		18F5BA2C273316340071BEBB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				18F5BA1C273311930071BEBB /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -272,7 +265,6 @@
 		18F5BA2D2733163D0071BEBB /* Saved */ = {
 			isa = PBXGroup;
 			children = (
-				18F5BA26273313450071BEBB /* SavedViewController.xib */,
 			);
 			path = Saved;
 			sourceTree = "<group>";
@@ -280,7 +272,6 @@
 		18F5BA2E273316440071BEBB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				18F5BA202733131D0071BEBB /* SettingsViewController.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -344,10 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F5B9FA2732FFA00071BEBB /* LaunchScreen.storyboard in Resources */,
-				18F5BA28273313450071BEBB /* SavedViewController.xib in Resources */,
 				18F5B9F72732FFA00071BEBB /* Assets.xcassets in Resources */,
-				18F5BA1E273311930071BEBB /* HomeViewController.xib in Resources */,
-				18F5BA222733131D0071BEBB /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
