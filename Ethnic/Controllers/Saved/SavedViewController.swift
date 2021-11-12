@@ -9,10 +9,16 @@ import UIKit
 
 class SavedViewController: BaseViewController {
 
+    //Declaration view frome Views folder.
+    private var savedView = SavedView()
+    
+    override func loadView() {
+        view = savedView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Сохраненное"
-
         // Do any additional setup after loading the view.
     }
 

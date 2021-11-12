@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185A6B052733CC6800FF2138 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A6B042733CC6800FF2138 /* BaseLabel.swift */; };
-		185A6B072733CE9300FF2138 /* BaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A6B062733CE9300FF2138 /* BaseTextView.swift */; };
 		185A6B09273402BA00FF2138 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A6B08273402BA00FF2138 /* URLConstants.swift */; };
 		185A6B0B2734030800FF2138 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A6B0A2734030800FF2138 /* FontsConstants.swift */; };
 		185A6B0D2734032B00FF2138 /* KeyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A6B0C2734032B00FF2138 /* KeyConstants.swift */; };
@@ -23,12 +21,12 @@
 		18F5BA1D273311930071BEBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1B273311930071BEBB /* HomeViewController.swift */; };
 		18F5BA212733131D0071BEBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1F2733131D0071BEBB /* SettingsViewController.swift */; };
 		18F5BA27273313450071BEBB /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA25273313450071BEBB /* SavedViewController.swift */; };
-		18F5BA32273318CB0071BEBB /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA31273318CB0071BEBB /* BaseButton.swift */; };
+		E9951F22273D958900783303 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9951F21273D958900783303 /* HomeView.swift */; };
+		E9BD1A7A273E633600AD496E /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1A79273E633600AD496E /* SavedView.swift */; };
+		E9BD1A7C273E67A400AD496E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1A7B273E67A400AD496E /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185A6B042733CC6800FF2138 /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
-		185A6B062733CE9300FF2138 /* BaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextView.swift; sourceTree = "<group>"; };
 		185A6B08273402BA00FF2138 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		185A6B0A2734030800FF2138 /* FontsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
 		185A6B0C2734032B00FF2138 /* KeyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyConstants.swift; sourceTree = "<group>"; };
@@ -45,7 +43,9 @@
 		18F5BA1B273311930071BEBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18F5BA1F2733131D0071BEBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		18F5BA25273313450071BEBB /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
-		18F5BA31273318CB0071BEBB /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		E9951F21273D958900783303 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E9BD1A79273E633600AD496E /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		E9BD1A7B273E67A400AD496E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,9 +192,6 @@
 		18F5BA10273308DE0071BEBB /* Base objects categories */ = {
 			isa = PBXGroup;
 			children = (
-				185A6B062733CE9300FF2138 /* BaseTextView.swift */,
-				18F5BA31273318CB0071BEBB /* BaseButton.swift */,
-				185A6B042733CC6800FF2138 /* BaseLabel.swift */,
 			);
 			path = "Base objects categories";
 			sourceTree = "<group>";
@@ -258,6 +255,7 @@
 		18F5BA2C273316340071BEBB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9951F21273D958900783303 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -265,6 +263,7 @@
 		18F5BA2D2733163D0071BEBB /* Saved */ = {
 			isa = PBXGroup;
 			children = (
+				E9BD1A79273E633600AD496E /* SavedView.swift */,
 			);
 			path = Saved;
 			sourceTree = "<group>";
@@ -272,6 +271,7 @@
 		18F5BA2E273316440071BEBB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E9BD1A7B273E67A400AD496E /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -348,18 +348,18 @@
 			files = (
 				18F5BA1627330EC30071BEBB /* BaseViewController.swift in Sources */,
 				18F5BA1A27330F390071BEBB /* BaseTabBarController.swift in Sources */,
-				185A6B072733CE9300FF2138 /* BaseTextView.swift in Sources */,
+				E9BD1A7C273E67A400AD496E /* SettingsView.swift in Sources */,
 				185A6B0F2734034F00FF2138 /* ColorConstants.swift in Sources */,
 				18F5BA212733131D0071BEBB /* SettingsViewController.swift in Sources */,
 				18F5B9EE2732FF9F0071BEBB /* AppDelegate.swift in Sources */,
-				18F5BA32273318CB0071BEBB /* BaseButton.swift in Sources */,
 				18F5BA1827330F030071BEBB /* BaseNavigationController.swift in Sources */,
 				18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */,
 				18F5BA27273313450071BEBB /* SavedViewController.swift in Sources */,
+				E9BD1A7A273E633600AD496E /* SavedView.swift in Sources */,
 				185A6B09273402BA00FF2138 /* URLConstants.swift in Sources */,
 				18F5BA1D273311930071BEBB /* HomeViewController.swift in Sources */,
 				185A6B0D2734032B00FF2138 /* KeyConstants.swift in Sources */,
-				185A6B052733CC6800FF2138 /* BaseLabel.swift in Sources */,
+				E9951F22273D958900783303 /* HomeView.swift in Sources */,
 				185A6B0B2734030800FF2138 /* FontsConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

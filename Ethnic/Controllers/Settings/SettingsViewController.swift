@@ -9,6 +9,13 @@ import UIKit
 
 class SettingsViewController: BaseViewController {
 
+    //Declaration view frome Views folder.
+    private var settingsView = SettingsView()
+    
+    override func loadView() {
+        view = settingsView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Настройки"
