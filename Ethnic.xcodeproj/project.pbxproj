@@ -129,9 +129,9 @@
 		18F5BA07273306D80071BEBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				18F5BA2E273316440071BEBB /* Settings */,
-				18F5BA2D2733163D0071BEBB /* Saved */,
 				18F5BA2C273316340071BEBB /* Home */,
+				18F5BA2D2733163D0071BEBB /* Saved */,
+				18F5BA2E273316440071BEBB /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 		18F5BA09273306F20071BEBB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				18F5BA2B2733161F0071BEBB /* Settings */,
-				18F5BA2A273316140071BEBB /* Saved */,
 				18F5BA292733160A0071BEBB /* Home */,
+				18F5BA2A273316140071BEBB /* Saved */,
+				18F5BA2B2733161F0071BEBB /* Settings */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

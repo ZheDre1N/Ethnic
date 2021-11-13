@@ -7,19 +7,20 @@
 
 import UIKit
 
-class HomeView: UIView{
+final class HomeView: UIView{
     
     // MARK: - Private variables.
     private let scrollView = UIScrollView()
     private let contentScrollView = UIView()
-    
     private let languageButtonsHeaderView = UIView()
-    private var sourceLanguageButton = UIButton()
-    private var swapLanguagesButton = UIButton()
-    private var targetLanguageButton = UIButton()
-    
     private let sourceTextView = UITextView()
     private let targetTextView = UITextView()
+    
+    // MARK: - Public variables.
+    public var rightNavigationBarItem = UIButton()
+    public let sourceLanguageButton = UIButton()
+    public let swapLanguagesButton = UIButton()
+    public let targetLanguageButton = UIButton()
     
     // MARK: - Configure init.
     override init(frame: CGRect) {
@@ -32,37 +33,43 @@ class HomeView: UIView{
         configureUI()
     }
     
-
     // MARK: - Configure UI.
-    func configureUI() {
+    private func configureUI() {
         
         // UI constants.
         let gap: CGFloat = 8
         let viewCornerRadius:CGFloat = 12
-        backgroundColor = .secondarySystemBackground
+        let bgColor = UIColor.secondarySystemBackground
         
-        
-        // List of content.
+        // List of content. Personal settings.
         configureScrollView()
         configureContentScrollView()
+        configureRightNavigationBarItem()
         configureLanguageButtonsHeader()
         configureSourceTextView()
         configureTargetTextView()
-
-//        func addNavigationButton() {
-//            let rightItem = UIButton(type: .system)
-//            rightItem.setImage(UIImage(named: "menu"), for: .normal)
-//            rightItem.sizeToFit()
-//            rightItem.heightAnchor.constraint(equalToConstant: 32).isActive = true
-//            rightItem.widthAnchor.constraint(equalToConstant: 32).isActive = true
-//            rightItem.tintColor = .white
-//            navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightItem)
-//            rightItem.addTarget(self, action: #selector(self.someAction), for: .touchUpInside)
-//        }
+        
+        // List of helpers functions. General settings.
+        configureStandardView(for: languageButtonsHeaderView)
+        configureStandardView(for: sourceTextView)
+        configureStandardView(for: targetTextView)
+        
+        func configureStandardView(for view: UIView) {
+            view.backgroundColor = .white
+            view.layer.cornerRadius = viewCornerRadius
+            view.layer.borderWidth = 1
+            view.layer.borderColor = UIColor.lightGray.cgColor
+            
+            view.layer.shadowColor = UIColor.black.cgColor
+            view.layer.shadowOpacity = 0.3
+            view.layer.shadowOffset = .zero
+            view.layer.shadowRadius = 8
+        }
+        
         
         func configureScrollView() {
             addSubview(scrollView)
-            scrollView.backgroundColor = .secondarySystemBackground
+            scrollView.backgroundColor = bgColor
             
             scrollView.translatesAutoresizingMaskIntoConstraints = false
             scrollView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
@@ -70,8 +77,9 @@ class HomeView: UIView{
             scrollView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
         }
-
+        
         func configureContentScrollView() {
+            
             scrollView.addSubview(contentScrollView)
             
             contentScrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -82,90 +90,74 @@ class HomeView: UIView{
             contentScrollView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: 0).isActive = true
             contentScrollView.heightAnchor.constraint(equalToConstant: 1500).isActive = true
         }
-
+        
+        func configureRightNavigationBarItem() {
+            rightNavigationBarItem = UIButton(type: .system)
+            rightNavigationBarItem.setImage(UIImage(named: "menu"), for: .normal)
+            rightNavigationBarItem.sizeToFit()
+            rightNavigationBarItem.heightAnchor.constraint(equalToConstant: 32).isActive = true
+            rightNavigationBarItem.widthAnchor.constraint(equalToConstant: 32).isActive = true
+            rightNavigationBarItem.tintColor = .white
+        }
+        
         func configureLanguageButtonsHeader() {
             let height:CGFloat = 40
             
             // Configure languageButtonsHeaderView
             contentScrollView.addSubview(languageButtonsHeaderView)
-            languageButtonsHeaderView.backgroundColor = .white
-            languageButtonsHeaderView.layer.cornerRadius = viewCornerRadius
-            languageButtonsHeaderView.layer.borderWidth = 1
-            languageButtonsHeaderView.layer.borderColor = UIColor.gray.cgColor
             
-            languageButtonsHeaderView.layer.shadowColor = UIColor.black.cgColor
-            languageButtonsHeaderView.layer.shadowOpacity = 0.3
-            languageButtonsHeaderView.layer.shadowOffset = .zero
-            languageButtonsHeaderView.layer.shadowRadius = 8
-
             languageButtonsHeaderView.translatesAutoresizingMaskIntoConstraints = false
             languageButtonsHeaderView.heightAnchor.constraint(equalToConstant: height).isActive = true
             languageButtonsHeaderView.topAnchor.constraint(equalTo: contentScrollView.topAnchor, constant: gap).isActive = true
             languageButtonsHeaderView.leftAnchor.constraint(equalTo: contentScrollView.leftAnchor, constant: gap).isActive = true
             languageButtonsHeaderView.rightAnchor.constraint(equalTo: contentScrollView.rightAnchor, constant: -gap).isActive = true
-
+            
             // Configure buttons.
             sourceLanguageButton.translatesAutoresizingMaskIntoConstraints = false
             sourceLanguageButton.setTitle("Русский", for: .normal)
             sourceLanguageButton.setTitleColor(.black, for: .normal)
             languageButtonsHeaderView.addSubview(sourceLanguageButton)
-
+            
             swapLanguagesButton.translatesAutoresizingMaskIntoConstraints = false
             swapLanguagesButton.setTitleColor(.black, for: .normal)
             swapLanguagesButton.setTitle("swap", for: .normal)
             languageButtonsHeaderView.addSubview(swapLanguagesButton)
-
+            
             targetLanguageButton.translatesAutoresizingMaskIntoConstraints = false
             targetLanguageButton.setTitle("Эрзянский", for: .normal)
             targetLanguageButton.setTitleColor(.black, for: .normal)
             languageButtonsHeaderView.addSubview(targetLanguageButton)
-
+            
             // Constraint buttons.
             sourceLanguageButton.leftAnchor.constraint(equalTo: languageButtonsHeaderView.leftAnchor).isActive = true
             sourceLanguageButton.centerYAnchor.constraint(equalTo: swapLanguagesButton.centerYAnchor).isActive = true
             sourceLanguageButton.rightAnchor.constraint(equalTo: swapLanguagesButton.leftAnchor).isActive = true
-
+            
             swapLanguagesButton.heightAnchor.constraint(equalTo: languageButtonsHeaderView.heightAnchor).isActive = true
             swapLanguagesButton.widthAnchor.constraint(equalTo: languageButtonsHeaderView.heightAnchor).isActive = true
             swapLanguagesButton.centerXAnchor.constraint(equalTo: languageButtonsHeaderView.centerXAnchor).isActive = true
-
+            
             targetLanguageButton.leftAnchor.constraint(equalTo: swapLanguagesButton.rightAnchor).isActive = true
             targetLanguageButton.centerYAnchor.constraint(equalTo: swapLanguagesButton.centerYAnchor).isActive = true
             targetLanguageButton.rightAnchor.constraint(equalTo: languageButtonsHeaderView.rightAnchor).isActive = true
         }
-
+        
         func configureSourceTextView() {
-            sourceTextView.translatesAutoresizingMaskIntoConstraints = false
-            sourceTextView.backgroundColor = .white
-            sourceTextView.layer.cornerRadius = viewCornerRadius
-            sourceTextView.layer.borderWidth = 1
-            sourceTextView.layer.borderColor = UIColor.gray.cgColor
             
-            sourceTextView.layer.shadowColor = UIColor.black.cgColor
-            sourceTextView.layer.shadowOpacity = 0.3
-            sourceTextView.layer.shadowOffset = .zero
-            sourceTextView.layer.shadowRadius = 8
             addSubview(sourceTextView)
             
+            sourceTextView.translatesAutoresizingMaskIntoConstraints = false
             sourceTextView.topAnchor.constraint(equalTo: languageButtonsHeaderView.bottomAnchor, constant: gap).isActive = true
             sourceTextView.leftAnchor.constraint(equalTo: contentScrollView.leftAnchor, constant: gap).isActive = true
             sourceTextView.rightAnchor.constraint(equalTo: contentScrollView.rightAnchor, constant: -gap).isActive = true
             sourceTextView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         }
-
+        
         func configureTargetTextView() {
-            targetTextView.translatesAutoresizingMaskIntoConstraints = false
-            targetTextView.backgroundColor = .white
-            targetTextView.layer.cornerRadius = viewCornerRadius
-            targetTextView.layer.borderWidth = 1
-            targetTextView.layer.borderColor = UIColor.gray.cgColor
             
-            targetTextView.layer.shadowColor = UIColor.black.cgColor
-            targetTextView.layer.shadowOpacity = 0.3
-            targetTextView.layer.shadowOffset = .zero
-            targetTextView.layer.shadowRadius = 8
             addSubview(targetTextView)
             
+            targetTextView.translatesAutoresizingMaskIntoConstraints = false
             targetTextView.topAnchor.constraint(equalTo: sourceTextView.bottomAnchor, constant: gap).isActive = true
             targetTextView.leftAnchor.constraint(equalTo: contentScrollView.leftAnchor, constant: gap).isActive = true
             targetTextView.rightAnchor.constraint(equalTo: contentScrollView.rightAnchor, constant: -gap).isActive = true
