@@ -13,24 +13,49 @@ final class HomeView: UIView{
     private let scrollView = UIScrollView()
     private let contentScrollView = UIView()
     private let languageButtonsHeaderView = UIView()
+    private let swapLanguagesButton = UIButton()
     private let sourceTextView = UITextView()
     private let targetTextView = UITextView()
     
     // MARK: - Public variables.
     public var rightNavigationBarItem = UIButton()
     public let sourceLanguageButton = UIButton()
-    public let swapLanguagesButton = UIButton()
     public let targetLanguageButton = UIButton()
     
-    // MARK: - Configure init.
+    // MARK: - Public closures.
+    public var sourceLanguageButtonClosure: (() -> Void)?
+    public var swapLanguagesButtonClosure: (() -> Void)?
+    public var targetLanguageButtonClosure: (() -> Void)?
+    
+    // MARK: - Configure inits.
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        configureTargets()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        configureUI()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure targets.
+    func configureTargets() {
+        sourceLanguageButton.addTarget(self, action: #selector(sourceLanguageButtonWasTapped), for: .touchUpInside)
+        swapLanguagesButton.addTarget(self, action: #selector(swapLanguagesButtonWasTapped), for: .touchUpInside)
+        targetLanguageButton.addTarget(self, action: #selector(targetLanguageButtonWasTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - Setup actions.
+    @objc private func sourceLanguageButtonWasTapped() {
+        sourceLanguageButtonClosure?()
+    }
+    
+    @objc private func swapLanguagesButtonWasTapped() {
+        swapLanguagesButtonClosure?()
+    }
+
+    @objc private func targetLanguageButtonWasTapped() {
+        targetLanguageButtonClosure?()
     }
     
     // MARK: - Configure UI.

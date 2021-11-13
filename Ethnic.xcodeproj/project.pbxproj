@@ -21,6 +21,10 @@
 		18F5BA1D273311930071BEBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1B273311930071BEBB /* HomeViewController.swift */; };
 		18F5BA212733131D0071BEBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1F2733131D0071BEBB /* SettingsViewController.swift */; };
 		18F5BA27273313450071BEBB /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA25273313450071BEBB /* SavedViewController.swift */; };
+		E91A8BAE273FED7600CE7FBF /* APIDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BAD273FED7600CE7FBF /* APIDataModel.swift */; };
+		E91A8BB0273FEDE600CE7FBF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BAF273FEDE600CE7FBF /* APIManager.swift */; };
+		E91A8BB2273FEE3800CE7FBF /* HistoryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BB1273FEE3800CE7FBF /* HistoryItems.swift */; };
+		E91A8BB4273FEE6900CE7FBF /* LanguageBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */; };
 		E9951F22273D958900783303 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9951F21273D958900783303 /* HomeView.swift */; };
 		E9BD1A7A273E633600AD496E /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1A79273E633600AD496E /* SavedView.swift */; };
 		E9BD1A7C273E67A400AD496E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1A7B273E67A400AD496E /* SettingsView.swift */; };
@@ -43,6 +47,10 @@
 		18F5BA1B273311930071BEBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18F5BA1F2733131D0071BEBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		18F5BA25273313450071BEBB /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		E91A8BAD273FED7600CE7FBF /* APIDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataModel.swift; sourceTree = "<group>"; };
+		E91A8BAF273FEDE600CE7FBF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E91A8BB1273FEE3800CE7FBF /* HistoryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItems.swift; sourceTree = "<group>"; };
+		E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageBaseManager.swift; sourceTree = "<group>"; };
 		E9951F21273D958900783303 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E9BD1A79273E633600AD496E /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		E9BD1A7B273E67A400AD496E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 		18F5BA08273306E50071BEBB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E91A8BAD273FED7600CE7FBF /* APIDataModel.swift */,
+				E91A8BAF273FEDE600CE7FBF /* APIManager.swift */,
+				E91A8BB1273FEE3800CE7FBF /* HistoryItems.swift */,
+				E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,8 +360,11 @@
 			files = (
 				18F5BA1627330EC30071BEBB /* BaseViewController.swift in Sources */,
 				18F5BA1A27330F390071BEBB /* BaseTabBarController.swift in Sources */,
+				E91A8BAE273FED7600CE7FBF /* APIDataModel.swift in Sources */,
+				E91A8BB4273FEE6900CE7FBF /* LanguageBaseManager.swift in Sources */,
 				E9BD1A7C273E67A400AD496E /* SettingsView.swift in Sources */,
 				185A6B0F2734034F00FF2138 /* ColorConstants.swift in Sources */,
+				E91A8BB2273FEE3800CE7FBF /* HistoryItems.swift in Sources */,
 				18F5BA212733131D0071BEBB /* SettingsViewController.swift in Sources */,
 				18F5B9EE2732FF9F0071BEBB /* AppDelegate.swift in Sources */,
 				18F5BA1827330F030071BEBB /* BaseNavigationController.swift in Sources */,
@@ -357,6 +372,7 @@
 				18F5BA27273313450071BEBB /* SavedViewController.swift in Sources */,
 				E9BD1A7A273E633600AD496E /* SavedView.swift in Sources */,
 				185A6B09273402BA00FF2138 /* URLConstants.swift in Sources */,
+				E91A8BB0273FEDE600CE7FBF /* APIManager.swift in Sources */,
 				18F5BA1D273311930071BEBB /* HomeViewController.swift in Sources */,
 				185A6B0D2734032B00FF2138 /* KeyConstants.swift in Sources */,
 				E9951F22273D958900783303 /* HomeView.swift in Sources */,

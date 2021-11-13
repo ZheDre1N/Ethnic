@@ -11,10 +11,6 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - Private variables.
     private let homeView = HomeView()
-    private var rightNavigationBarItem = UIButton()
-    private var sourceLanguageButton = UIButton()
-    private var swapLanguagesButton = UIButton()
-    private var targetLanguageButton = UIButton()
     
     // MARK: - Public variables.
     public let sourceLanguageKey = "rus"
@@ -26,52 +22,35 @@ final class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTargets()
+        declarationActions()
     }
     
     // MARK: - Processing actions.
-    @objc private func rightNavigationButtonWasPressed() {
-        print("right button was pressed")
+    private func sourceLanguageButtonWasTapped() {
+        homeView.sourceLanguageButtonClosure  = { [weak self] in
+            print("Tapped 1")
+            self?.homeView.sourceLanguageButton.setTitleColor(.red, for: .normal)
+        }
     }
     
-    @objc private func sourceLanguageButtonWasPressed() {
-        print("source language button was pressed")
+    private func swapLanguagesButtonWasTapped() {
+        homeView.swapLanguagesButtonClosure  = { [weak self] in
+            print("Tapped 2")
+        }
     }
     
-    @objc private func swapLanguagesButtonWasPressed() {
-        print("swap languages button was pressed")
+    private func targetLanguageButtonWasTapped() {
+        homeView.targetLanguageButtonClosure  = { [weak self] in
+            print("Tapped 3")
+            self?.homeView.targetLanguageButton.setTitleColor(.green, for: .normal)
+        }
     }
     
-    @objc private func targetLanguageButtonWasPressed() {
-        print("target language button was pressed")
-    }
     
     // MARK: - Create targets.
-    private func configureTargets() {
-        createRightNavigationBarItem()
-        createSourceLanguageButton()
-        createSwapLanguagesButton()
-        createTargetLanguageButton()
-        
-        func createRightNavigationBarItem() {
-            rightNavigationBarItem = homeView.rightNavigationBarItem
-            navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightNavigationBarItem)
-            rightNavigationBarItem.addTarget(self, action: #selector(self.rightNavigationButtonWasPressed), for: .touchUpInside)
-        }
-        
-        func createSourceLanguageButton() {
-            sourceLanguageButton = homeView.sourceLanguageButton
-            sourceLanguageButton.addTarget(self, action: #selector(self.sourceLanguageButtonWasPressed), for: .touchUpInside)
-        }
-        
-        func createSwapLanguagesButton() {
-            swapLanguagesButton = homeView.swapLanguagesButton
-            swapLanguagesButton.addTarget(self, action: #selector(self.swapLanguagesButtonWasPressed), for: .touchUpInside)
-        }
-        
-        func createTargetLanguageButton() {
-            targetLanguageButton = homeView.targetLanguageButton
-            targetLanguageButton.addTarget(self, action: #selector(self.targetLanguageButtonWasPressed), for: .touchUpInside)
-        }
+    private func declarationActions() {
+        sourceLanguageButtonWasTapped()
+        swapLanguagesButtonWasTapped()
+        targetLanguageButtonWasTapped()
     }
 }
