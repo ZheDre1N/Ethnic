@@ -9,9 +9,10 @@ import UIKit
 
 class SavedViewController: BaseViewController {
 
-    //Declaration view frome Views folder.
+    // MARK: - Private properties.
     private var savedView = SavedView()
     
+    // MARK: - View controller life cycle.
     override func loadView() {
         view = savedView
     }
@@ -21,16 +22,4 @@ class SavedViewController: BaseViewController {
         title = "Сохраненное"
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

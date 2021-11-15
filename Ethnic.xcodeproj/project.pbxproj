@@ -25,6 +25,9 @@
 		E91A8BB0273FEDE600CE7FBF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BAF273FEDE600CE7FBF /* APIManager.swift */; };
 		E91A8BB2273FEE3800CE7FBF /* HistoryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BB1273FEE3800CE7FBF /* HistoryItems.swift */; };
 		E91A8BB4273FEE6900CE7FBF /* LanguageBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */; };
+		E96FAFB727416F5F0034CE60 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FAFB627416F5F0034CE60 /* LanguageSelectionView.swift */; };
+		E96FAFB927416FF80034CE60 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FAFB827416FF80034CE60 /* LanguageSelectionViewController.swift */; };
+		E96FAFC32741919E0034CE60 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96FAFC22741919E0034CE60 /* UserSettings.swift */; };
 		E9951F22273D958900783303 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9951F21273D958900783303 /* HomeView.swift */; };
 		E9BD1A7A273E633600AD496E /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1A79273E633600AD496E /* SavedView.swift */; };
 		E9BD1A7C273E67A400AD496E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1A7B273E67A400AD496E /* SettingsView.swift */; };
@@ -51,6 +54,9 @@
 		E91A8BAF273FEDE600CE7FBF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E91A8BB1273FEE3800CE7FBF /* HistoryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItems.swift; sourceTree = "<group>"; };
 		E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageBaseManager.swift; sourceTree = "<group>"; };
+		E96FAFB627416F5F0034CE60 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
+		E96FAFB827416FF80034CE60 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
+		E96FAFC22741919E0034CE60 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		E9951F21273D958900783303 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E9BD1A79273E633600AD496E /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		E9BD1A7B273E67A400AD496E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -147,10 +153,9 @@
 		18F5BA08273306E50071BEBB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E91A8BAD273FED7600CE7FBF /* APIDataModel.swift */,
-				E91A8BAF273FEDE600CE7FBF /* APIManager.swift */,
 				E91A8BB1273FEE3800CE7FBF /* HistoryItems.swift */,
 				E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */,
+				E96FAFC22741919E0034CE60 /* UserSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +183,8 @@
 		18F5BA0D273308B90071BEBB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E96FAFBF274184EC0034CE60 /* Extensions */,
+				E96FAFBE274184DF0034CE60 /* Protocols */,
 				18F5BA13273309040071BEBB /* Singleton */,
 				18F5BA12273308F80071BEBB /* Message center */,
 				18F5BA11273308EB0071BEBB /* Constants */,
@@ -197,6 +204,8 @@
 		18F5BA0F273308D50071BEBB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E91A8BAF273FEDE600CE7FBF /* APIManager.swift */,
+				E91A8BAD273FED7600CE7FBF /* APIDataModel.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				18F5BA1B273311930071BEBB /* HomeViewController.swift */,
+				E96FAFB827416FF80034CE60 /* LanguageSelectionViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -268,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				E9951F21273D958900783303 /* HomeView.swift */,
+				E96FAFB627416F5F0034CE60 /* LanguageSelectionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -286,6 +297,20 @@
 				E9BD1A7B273E67A400AD496E /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		E96FAFBE274184DF0034CE60 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E96FAFBF274184EC0034CE60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +386,7 @@
 				18F5BA1627330EC30071BEBB /* BaseViewController.swift in Sources */,
 				18F5BA1A27330F390071BEBB /* BaseTabBarController.swift in Sources */,
 				E91A8BAE273FED7600CE7FBF /* APIDataModel.swift in Sources */,
+				E96FAFB727416F5F0034CE60 /* LanguageSelectionView.swift in Sources */,
 				E91A8BB4273FEE6900CE7FBF /* LanguageBaseManager.swift in Sources */,
 				E9BD1A7C273E67A400AD496E /* SettingsView.swift in Sources */,
 				185A6B0F2734034F00FF2138 /* ColorConstants.swift in Sources */,
@@ -377,6 +403,8 @@
 				185A6B0D2734032B00FF2138 /* KeyConstants.swift in Sources */,
 				E9951F22273D958900783303 /* HomeView.swift in Sources */,
 				185A6B0B2734030800FF2138 /* FontsConstants.swift in Sources */,
+				E96FAFB927416FF80034CE60 /* LanguageSelectionViewController.swift in Sources */,
+				E96FAFC32741919E0034CE60 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

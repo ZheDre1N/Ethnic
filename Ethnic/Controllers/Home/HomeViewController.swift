@@ -9,13 +9,10 @@ import UIKit
 
 final class HomeViewController: BaseViewController {
     
-    // MARK: - Private variables.
+    // MARK: - Private properties.
     private let homeView = HomeView()
     
-    // MARK: - Public variables.
-    public let sourceLanguageKey = "rus"
-    public let targetLanguageKey = "myv"
-    
+    // MARK: - View controller life cycle.
     override func loadView() {
         view = homeView
     }
@@ -28,21 +25,33 @@ final class HomeViewController: BaseViewController {
     // MARK: - Processing actions.
     private func sourceLanguageButtonWasTapped() {
         homeView.sourceLanguageButtonClosure  = { [weak self] in
-            print("Tapped 1")
-            self?.homeView.sourceLanguageButton.setTitleColor(.red, for: .normal)
+            let languageSelectionViewController = LanguageSelectionViewController()
+            self?.present(languageSelectionViewController, animated: true) {
+                languageSelectionViewController.didSelectLanguage = { [weak self] in
+                    // change source language
+                    print("sourceLang")
+                    self?.dismiss(animated: true, completion: nil)
+                }
+            }
         }
     }
     
     private func swapLanguagesButtonWasTapped() {
-        homeView.swapLanguagesButtonClosure  = { [weak self] in
-            print("Tapped 2")
-        }
+//        homeView.swapLanguagesButtonClosure  = { [weak self] in
+//            print("Tapped 2")
+//        }
     }
     
     private func targetLanguageButtonWasTapped() {
         homeView.targetLanguageButtonClosure  = { [weak self] in
-            print("Tapped 3")
-            self?.homeView.targetLanguageButton.setTitleColor(.green, for: .normal)
+            let languageSelectionViewController = LanguageSelectionViewController()
+            self?.present(languageSelectionViewController, animated: true) {
+                languageSelectionViewController.didSelectLanguage = { [weak self] in
+                    // change target language
+                    print("targetLang")
+                    self?.dismiss(animated: true, completion: nil)
+                }
+            }
         }
     }
     
