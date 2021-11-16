@@ -11,15 +11,28 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - Private properties.
     private let homeView = HomeView()
+    private let userSettings = UserSettings()
+    private let languageBaseManager = LanguageBaseManager()
     
     // MARK: - View controller life cycle.
     override func loadView() {
         view = homeView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         declarationActions()
+    }
+    
+    // MARK: - Update UI.
+    private func updateUI() {
+//        homeView.sourceLanguageButton.setTitle("\(languageBaseManager.getLanguageName(forKey: "\(userSettings.currentSourceLanguageKey)"))", for: .normal)
+//        homeView.targetLanguageButton.setTitle("\(languageBaseManager.getLanguageName(forKey: "\(userSettings.currentTargetLanguageKey)"))", for: .normal)
     }
     
     // MARK: - Processing actions.
@@ -29,7 +42,6 @@ final class HomeViewController: BaseViewController {
             self?.present(languageSelectionViewController, animated: true) {
                 languageSelectionViewController.didSelectLanguage = { [weak self] in
                     // change source language
-                    print("sourceLang")
                     self?.dismiss(animated: true, completion: nil)
                 }
             }
@@ -48,7 +60,7 @@ final class HomeViewController: BaseViewController {
             self?.present(languageSelectionViewController, animated: true) {
                 languageSelectionViewController.didSelectLanguage = { [weak self] in
                     // change target language
-                    print("targetLang")
+//                    print("\(languageSelectionViewController.chosenLanguageKey)")
                     self?.dismiss(animated: true, completion: nil)
                 }
             }

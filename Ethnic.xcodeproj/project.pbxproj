@@ -122,6 +122,7 @@
 		18F5BA05273306B80071BEBB /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */,
 				18F5B9F82732FFA00071BEBB /* LaunchScreen.storyboard */,
 				18F5B9FB2732FFA00071BEBB /* Info.plist */,
 				18F5B9ED2732FF9F0071BEBB /* AppDelegate.swift */,
@@ -154,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				E91A8BB1273FEE3800CE7FBF /* HistoryItems.swift */,
-				E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */,
 				E96FAFC22741919E0034CE60 /* UserSettings.swift */,
 			);
 			path = Models;

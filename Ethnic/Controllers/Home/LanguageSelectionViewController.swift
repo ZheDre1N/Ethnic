@@ -10,9 +10,13 @@ import UIKit
 final class LanguageSelectionViewController: UIViewController {
     
     // MARK: - Private properties.
-    private var languageSelectionView = LanguageSelectionView()
+    private let languageSelectionView = LanguageSelectionView()
+    private let languageBaseManager = LanguageBaseManager()
+    private var languageNames:[String] = []
     
+    // MARK: - Public variables.
     public var didSelectLanguage: (() -> Void)?
+    public var chosenLanguageKey: String?
     
     // MARK: - View controller life cycle.
     override func loadView() {
@@ -21,9 +25,13 @@ final class LanguageSelectionViewController: UIViewController {
         languageSelectionView.table.register(UITableViewCell.self, forCellReuseIdentifier: "languageSelectionCell")
         view = languageSelectionView
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         declarationActions()
+        
+        // Prepare data source
+        languageNames = languageBaseManager.getLanguageNames()
     }
     
     // MARK: - Processing actions.
@@ -42,7 +50,7 @@ final class LanguageSelectionViewController: UIViewController {
 // MARK: - UITableViewDataSource.
 extension LanguageSelectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return languageNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,7 +59,7 @@ extension LanguageSelectionViewController: UITableViewDataSource {
         
         // Configure content.
         var content = cell.defaultContentConfiguration()
-        content.text = "My language is \(indexPath.row)"
+        content.text = languageNames[indexPath.row]
         cell.contentConfiguration = content
         return cell
     }
@@ -65,6 +73,7 @@ extension LanguageSelectionViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        chosenLanguageKey = languageBaseManager.getLanguageKey(forLanguageName: "\(languageNames[indexPath.row])")
         didSelectLanguage?()
     }
 }
