@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LanguageBaseManager {
+final class LanguageBaseManager {
 
     let base:[String:String] = [
         "rus":"Russian",

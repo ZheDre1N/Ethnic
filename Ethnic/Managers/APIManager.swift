@@ -9,7 +9,6 @@ import Foundation
 
 class APIManager {
     
-    
     static func translateText (sourceLanguage: String, targetLanguage: String, sourceText: String, completion: @escaping (_ targetText: String)->()) {
         
         // 1. Creating url
@@ -37,28 +36,8 @@ class APIManager {
             guard let data = data else { return }
             
             // 7. decode data for saving in the model
-            do {
-                let decodedData = try JSONDecoder().decode(APIDataModel.self, from: data)
-                let targetText = decodedData.data
-                
-                // 8. Call completion handler to transmit data
-                completion(targetText)
-                self.addTranslatedTextToHistory(sourceLanguage: sourceLanguage, targetLanguage: targetLanguage, sourceText: sourceText, targetText: targetText)
-            } catch let error {
-                print(error)
-            }
+
             
         }.resume()
-    }
-        
-    static func addTranslatedTextToHistory(sourceLanguage: String, targetLanguage: String, sourceText: String,targetText: String) {
-        // add new translated text to history
-        let history = HistoryItems.shared
-        history.historiesArray.append(HistoryItems.HistoryItem.init(sourceLanguage: "\(sourceLanguage)",
-                                                                    targetLanguage: "\(targetLanguage)",
-                                                                    sourceText: "\(sourceText)",
-                                                                    targetText: "\(targetText)",
-                                                                    isFavorites: false)
-        )
     }
 }

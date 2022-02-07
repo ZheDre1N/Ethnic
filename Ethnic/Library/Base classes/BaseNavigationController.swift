@@ -18,7 +18,8 @@ class BaseNavigationController: UINavigationController {
     }
     
     enum NavigationBarStyle {
-        case classic, homePage
+        case classic
+        case homePage
     }
     
     init(rootViewController: UIViewController, style: NavigationBarStyle) {
