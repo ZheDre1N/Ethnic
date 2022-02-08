@@ -22,13 +22,15 @@ final class HomePresenter: HomeViewPresenterProtocol {
     }
     
     func translateText(sourceText: String) {
-        // translate text and call updateTargetTextView
+        let translateManager = TranslateManager()      
         
-        // start completion handller
-        updateTargetTextView(targetText: "Шумбрат")
-        // end of completion handler
+        translateManager.translateText(sourceLanguage: "rus", targetLanguage: "myv", sourceText: sourceText) { [weak self] targetText in
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                self.updateTargetTextView(targetText: targetText)
+            }
+        }
     }
-
     
     func updateTargetTextView(targetText: String) {
         self.view.setTargetText(targetText: targetText)

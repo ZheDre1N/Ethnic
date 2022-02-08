@@ -11,30 +11,30 @@
 		18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5B9EF2732FF9F0071BEBB /* SceneDelegate.swift */; };
 		18F5B9F72732FFA00071BEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F62732FFA00071BEBB /* Assets.xcassets */; };
 		18F5B9FA2732FFA00071BEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F82732FFA00071BEBB /* LaunchScreen.storyboard */; };
-		18F5BA1627330EC30071BEBB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1527330EC30071BEBB /* BaseViewController.swift */; };
-		18F5BA1827330F030071BEBB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1727330F030071BEBB /* BaseNavigationController.swift */; };
-		18F5BA1A27330F390071BEBB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5BA1927330F390071BEBB /* BaseTabBarController.swift */; };
 		DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67046E27A836E800AA3F8F /* TabBarController.swift */; };
 		DF67047127A849FE00AA3F8F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047027A849FE00AA3F8F /* HomeRouter.swift */; };
 		DF67047327A84B0C00AA3F8F /* SavedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047227A84B0C00AA3F8F /* SavedRouter.swift */; };
 		DFC3432127B0F0AD00F1D160 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3431F27B0F0AD00F1D160 /* LanguageSelectionViewController.swift */; };
 		DFC3432227B0F0AD00F1D160 /* LanguageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC3432027B0F0AD00F1D160 /* LanguageSelectionViewController.xib */; };
 		DFC3432427B0F15200F1D160 /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3432327B0F15200F1D160 /* LanguageSelectionPresenter.swift */; };
-		DFC3432627B0F37600F1D160 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3432527B0F37600F1D160 /* StorageManager.swift */; };
 		DFC3432927B0FEB300F1D160 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3432727B0FEB300F1D160 /* SavedViewController.swift */; };
 		DFC3432A27B0FEB300F1D160 /* SavedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC3432827B0FEB300F1D160 /* SavedViewController.xib */; };
 		DFC3432C27B0FEBF00F1D160 /* SavedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3432B27B0FEBF00F1D160 /* SavedPresenter.swift */; };
 		DFC3432F27B1013300F1D160 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3432D27B1013300F1D160 /* SettingsViewController.swift */; };
 		DFC3433027B1013300F1D160 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC3432E27B1013300F1D160 /* SettingsViewController.xib */; };
 		DFC3433227B1014600F1D160 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3433127B1014600F1D160 /* SettingsPresenter.swift */; };
+		DFC54C0A27B2B18B007B0EAA /* APIDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C0927B2B18B007B0EAA /* APIDataModel.swift */; };
+		DFC54C0C27B2C166007B0EAA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C0B27B2C166007B0EAA /* HTTPMethod.swift */; };
+		DFC54C1227B2C8AF007B0EAA /* TranslateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1127B2C8AF007B0EAA /* TranslateRequest.swift */; };
+		DFC54C1527B2D6A8007B0EAA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */; };
+		DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1627B31F3A007B0EAA /* Translation.swift */; };
+		DFC54C1927B31F9C007B0EAA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1827B31F9C007B0EAA /* History.swift */; };
 		DFF496D927B0487D00EBF4C9 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496D827B0487D00EBF4C9 /* SettingsRouter.swift */; };
 		DFF496DB27B04C9500EBF4C9 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */; };
-		DFF496DD27B0611F00EBF4C9 /* APITranslaterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DC27B0611F00EBF4C9 /* APITranslaterAdapter.swift */; };
 		DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DE27B0643900EBF4C9 /* HomePresenter.swift */; };
 		DFF496E227B06B2000EBF4C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496E027B06B2000EBF4C9 /* HomeViewController.swift */; };
 		DFF496E327B06B2000EBF4C9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF496E127B06B2000EBF4C9 /* HomeViewController.xib */; };
-		E91A8BB0273FEDE600CE7FBF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BAF273FEDE600CE7FBF /* APIManager.swift */; };
-		E91A8BB4273FEE6900CE7FBF /* LanguageBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */; };
+		E91A8BB0273FEDE600CE7FBF /* TranslateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A8BAF273FEDE600CE7FBF /* TranslateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,30 +44,30 @@
 		18F5B9F62732FFA00071BEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F5B9F92732FFA00071BEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F5B9FB2732FFA00071BEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18F5BA1527330EC30071BEBB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		18F5BA1727330F030071BEBB /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		18F5BA1927330F390071BEBB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		DF67046E27A836E800AA3F8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF67047027A849FE00AA3F8F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DF67047227A84B0C00AA3F8F /* SavedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRouter.swift; sourceTree = "<group>"; };
 		DFC3431F27B0F0AD00F1D160 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
 		DFC3432027B0F0AD00F1D160 /* LanguageSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageSelectionViewController.xib; sourceTree = "<group>"; };
 		DFC3432327B0F15200F1D160 /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
-		DFC3432527B0F37600F1D160 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		DFC3432727B0FEB300F1D160 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		DFC3432827B0FEB300F1D160 /* SavedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedViewController.xib; sourceTree = "<group>"; };
 		DFC3432B27B0FEBF00F1D160 /* SavedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPresenter.swift; sourceTree = "<group>"; };
 		DFC3432D27B1013300F1D160 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DFC3432E27B1013300F1D160 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		DFC3433127B1014600F1D160 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		DFC54C0927B2B18B007B0EAA /* APIDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataModel.swift; sourceTree = "<group>"; };
+		DFC54C0B27B2C166007B0EAA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DFC54C1127B2C8AF007B0EAA /* TranslateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRequest.swift; sourceTree = "<group>"; };
+		DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DFC54C1627B31F3A007B0EAA /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		DFC54C1827B31F9C007B0EAA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DFF496D827B0487D00EBF4C9 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
-		DFF496DC27B0611F00EBF4C9 /* APITranslaterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITranslaterAdapter.swift; sourceTree = "<group>"; };
 		DFF496DE27B0643900EBF4C9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		DFF496E027B06B2000EBF4C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFF496E127B06B2000EBF4C9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		E91A8BAF273FEDE600CE7FBF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageBaseManager.swift; sourceTree = "<group>"; };
+		E91A8BAF273FEDE600CE7FBF /* TranslateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				18F5BA05273306B80071BEBB /* Application */,
-				DF67046D27A832DD00AA3F8F /* Managers */,
+				DF67046D27A832DD00AA3F8F /* Networking */,
 				18F5BA07273306D80071BEBB /* Core */,
-				18F5BA06273306C60071BEBB /* Library */,
+				18F5BA06273306C60071BEBB /* Reusable Library */,
 				18F5BA042733069F0071BEBB /* Resources */,
 			);
 			path = Ethnic;
@@ -130,18 +130,20 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		18F5BA06273306C60071BEBB /* Library */ = {
+		18F5BA06273306C60071BEBB /* Reusable Library */ = {
 			isa = PBXGroup;
 			children = (
+				DFC54C1327B2D2ED007B0EAA /* Network */,
+				DFC54C1027B2C749007B0EAA /* Models */,
 				DFF496D727B045A500EBF4C9 /* Protocols */,
-				18F5BA0A273307690071BEBB /* Base classes */,
 			);
-			path = Library;
+			path = "Reusable Library";
 			sourceTree = "<group>";
 		};
 		18F5BA07273306D80071BEBB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DFC54C0627B25F25007B0EAA /* Models */,
 				DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */,
 				DF67047027A849FE00AA3F8F /* HomeRouter.swift */,
 				DF67047227A84B0C00AA3F8F /* SavedRouter.swift */,
@@ -152,16 +154,6 @@
 				18F5BA2E273316440071BEBB /* SettingsModule */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		18F5BA0A273307690071BEBB /* Base classes */ = {
-			isa = PBXGroup;
-			children = (
-				18F5BA1527330EC30071BEBB /* BaseViewController.swift */,
-				18F5BA1727330F030071BEBB /* BaseNavigationController.swift */,
-				18F5BA1927330F390071BEBB /* BaseTabBarController.swift */,
-			);
-			path = "Base classes";
 			sourceTree = "<group>";
 		};
 		18F5BA14273309340071BEBB /* Sounds */ = {
@@ -201,15 +193,39 @@
 			path = SettingsModule;
 			sourceTree = "<group>";
 		};
-		DF67046D27A832DD00AA3F8F /* Managers */ = {
+		DF67046D27A832DD00AA3F8F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				DFF496DC27B0611F00EBF4C9 /* APITranslaterAdapter.swift */,
-				E91A8BAF273FEDE600CE7FBF /* APIManager.swift */,
-				E91A8BB3273FEE6900CE7FBF /* LanguageBaseManager.swift */,
-				DFC3432527B0F37600F1D160 /* StorageManager.swift */,
+				E91A8BAF273FEDE600CE7FBF /* TranslateManager.swift */,
+				DFC54C0927B2B18B007B0EAA /* APIDataModel.swift */,
+				DFC54C1127B2C8AF007B0EAA /* TranslateRequest.swift */,
 			);
-			path = Managers;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DFC54C0627B25F25007B0EAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFC54C1627B31F3A007B0EAA /* Translation.swift */,
+				DFC54C1827B31F9C007B0EAA /* History.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DFC54C1027B2C749007B0EAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFC54C0B27B2C166007B0EAA /* HTTPMethod.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DFC54C1327B2D2ED007B0EAA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		DFF496D627B0455000EBF4C9 /* LanguageSelectionModule */ = {
@@ -303,25 +319,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F5BA1627330EC30071BEBB /* BaseViewController.swift in Sources */,
-				18F5BA1A27330F390071BEBB /* BaseTabBarController.swift in Sources */,
 				DFC3432F27B1013300F1D160 /* SettingsViewController.swift in Sources */,
 				DFC3432C27B0FEBF00F1D160 /* SavedPresenter.swift in Sources */,
+				DFC54C0A27B2B18B007B0EAA /* APIDataModel.swift in Sources */,
 				DFF496D927B0487D00EBF4C9 /* SettingsRouter.swift in Sources */,
-				E91A8BB4273FEE6900CE7FBF /* LanguageBaseManager.swift in Sources */,
 				DFF496E227B06B2000EBF4C9 /* HomeViewController.swift in Sources */,
 				DFC3433227B1014600F1D160 /* SettingsPresenter.swift in Sources */,
 				DFC3432427B0F15200F1D160 /* LanguageSelectionPresenter.swift in Sources */,
 				18F5B9EE2732FF9F0071BEBB /* AppDelegate.swift in Sources */,
 				DF67047127A849FE00AA3F8F /* HomeRouter.swift in Sources */,
 				DFC3432127B0F0AD00F1D160 /* LanguageSelectionViewController.swift in Sources */,
-				18F5BA1827330F030071BEBB /* BaseNavigationController.swift in Sources */,
 				18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */,
-				DFC3432627B0F37600F1D160 /* StorageManager.swift in Sources */,
+				DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */,
 				DFF496DB27B04C9500EBF4C9 /* AssemblyBuilder.swift in Sources */,
+				DFC54C1527B2D6A8007B0EAA /* NetworkService.swift in Sources */,
+				DFC54C1927B31F9C007B0EAA /* History.swift in Sources */,
 				DF67047327A84B0C00AA3F8F /* SavedRouter.swift in Sources */,
-				E91A8BB0273FEDE600CE7FBF /* APIManager.swift in Sources */,
-				DFF496DD27B0611F00EBF4C9 /* APITranslaterAdapter.swift in Sources */,
+				E91A8BB0273FEDE600CE7FBF /* TranslateManager.swift in Sources */,
+				DFC54C0C27B2C166007B0EAA /* HTTPMethod.swift in Sources */,
+				DFC54C1227B2C8AF007B0EAA /* TranslateRequest.swift in Sources */,
 				DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */,
 				DFC3432927B0FEB300F1D160 /* SavedViewController.swift in Sources */,
 				DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */,

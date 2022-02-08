@@ -1,13 +1,14 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-    
+        
     let home = HomeRouter()
     let saved = SavedRouter()
     let settings = SettingsRouter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewControllers = [
             home.navigationController,
             saved.navigationController,
@@ -15,6 +16,7 @@ final class TabBarController: UITabBarController {
         ]
         
         configureTabBars()
+        customizeAppearance()
     }
     
     private func configureTabBars() {
@@ -24,5 +26,11 @@ final class TabBarController: UITabBarController {
         saved.navigationController.tabBarItem.selectedImage = UIImage(systemName: "star.fill")
         settings.navigationController.tabBarItem = UITabBarItem(title: "Настройки", image: UIImage(systemName: "gearshape.2"), tag: 2)
         settings.navigationController.tabBarItem.selectedImage = UIImage(systemName: "gearshape.2.fill")
+    }
+    
+    private func customizeAppearance() {
+            //Set the item tint colors
+            tabBar.tintColor = .black
+            tabBar.unselectedItemTintColor = .lightGray
     }
 }

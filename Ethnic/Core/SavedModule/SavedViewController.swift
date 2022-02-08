@@ -1,6 +1,6 @@
 import UIKit
 
-final class SavedViewController: BaseViewController {
+final class SavedViewController: UIViewController {
 
     // MARK: - Public properties.
     var presenter: SavedViewPresenterProtocol!

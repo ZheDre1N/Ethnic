@@ -1,6 +1,6 @@
 import UIKit
 
-final class LanguageSelectionViewController: BaseViewController {
+final class LanguageSelectionViewController: UIViewController {
 
     // MARK: - Public properties.
     var presenter: LanguageSelectionViewPresenterProtocol!

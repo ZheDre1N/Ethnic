@@ -1,9 +1,13 @@
 import UIKit
 
-final class HomeViewController: BaseViewController {
-
-    // MARK: - Public properties.
+final class HomeViewController: UIViewController {
+    
+    // MARK: - Properties.
     var presenter: HomeViewPresenterProtocol!
+    
+    // MARK: - NIB OUTLETS.
+    @IBOutlet weak var sourceTextView: UITextView!
+    @IBOutlet weak var targetTextView: UITextView!
     
     // MARK: - View controller life cycle.
     override func viewDidLoad() {
@@ -11,14 +15,28 @@ final class HomeViewController: BaseViewController {
         title = "Переводчик"
     }
     
-    func translateButtonTapped() {
-        self.presenter.translateText(sourceText: "Привет")
+    // MARK: - NIB ACTIONS.
+    @IBAction func sourceLanguageButtonTapped(_ sender: UIButton) {
+        print("source")
+    }
+    
+    @IBAction func swapLanguageButtonTapped(_ sender: UIButton) {
+        print("swap")
+    }
+    
+    @IBAction func targetLanguageButtonTapped(_ sender: UIButton) {
+        print("target")
+    }
+    
+    @IBAction func translateButtonTapped(_ sender: UIButton) {
+        if let sourceText = sourceTextView.text {
+            self.presenter.translateText(sourceText: sourceText)
+        }
     }
 }
-
 // MARK: - HomeViewProtocol.
 extension HomeViewController: HomeViewProtocol {
     func setTargetText(targetText: String) {
-        // targetTextView.text = targetText
+        targetTextView.text = targetText
     }
 }

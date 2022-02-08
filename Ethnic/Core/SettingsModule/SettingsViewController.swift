@@ -1,6 +1,6 @@
 import UIKit
 
-final class SettingsViewController: BaseViewController {
+final class SettingsViewController: UIViewController {
 
     // MARK: - Public properties.
     var presenter: SettingsViewPresenterProtocol!
