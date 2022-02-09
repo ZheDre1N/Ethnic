@@ -1,6 +1,15 @@
 import Foundation
 
-class TranslateManager {
+protocol TranslateManagerProtocol {
+    func translateText(
+        sourceLanguageKey: String,
+        targetLanguageKey: String,
+        sourceText: String,
+        completionHandler: @escaping (Result<String, Error>) -> ()
+    )
+}
+
+class TranslateManager: TranslateManagerProtocol {
 
     func translateText(
         sourceLanguageKey: String,

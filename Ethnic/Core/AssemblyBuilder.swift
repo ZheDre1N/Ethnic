@@ -11,7 +11,8 @@ final class AssemblyBuilder: AssemblyBuilderProtocol {
     // MARK: - Home tabs.
     func createHomeModule(router: HomeRouterProtocol) -> UIViewController {
         let view = HomeViewController()
-        let presenter = HomePresenter(view: view, router: router)
+        let translateManager = TranslateManager()
+        let presenter = HomePresenter(view: view, router: router, translateManager: translateManager)
         view.presenter = presenter
         return view
     }
