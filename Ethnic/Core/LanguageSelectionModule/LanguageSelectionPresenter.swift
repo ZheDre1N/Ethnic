@@ -11,7 +11,7 @@ protocol LanguageSelectionViewPresenterProtocol: AnyObject {
 
 final class LanguageSelectionPresenter: LanguageSelectionViewPresenterProtocol {
 
-    var view: LanguageSelectionViewProtocol
+    weak var view: LanguageSelectionViewProtocol?
     var router: HomeRouterProtocol
         
     required init(view: LanguageSelectionViewProtocol, router: HomeRouterProtocol) {

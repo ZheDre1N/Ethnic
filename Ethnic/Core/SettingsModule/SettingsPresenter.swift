@@ -11,7 +11,7 @@ protocol SettingsViewPresenterProtocol: AnyObject {
 
 final class SettingsPresenter: SettingsViewPresenterProtocol {
 
-    var view: SettingsViewProtocol
+    weak var view: SettingsViewProtocol?
     var router: SettingsRouterProtocol
         
     required init(view: SettingsViewProtocol, router: SettingsRouterProtocol) {

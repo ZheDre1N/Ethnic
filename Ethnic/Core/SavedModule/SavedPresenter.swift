@@ -11,7 +11,7 @@ protocol SavedViewPresenterProtocol: AnyObject {
 
 final class SavedPresenter: SavedViewPresenterProtocol {
 
-    var view: SavedViewProtocol
+    weak var view: SavedViewProtocol?
     var router: SavedRouterProtocol
         
     required init(view: SavedViewProtocol, router: SavedRouterProtocol) {
