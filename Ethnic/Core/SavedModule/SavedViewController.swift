@@ -8,6 +8,7 @@ final class SavedViewController: UIViewController {
     // MARK: - View controller life cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Сохраненное"
     }
 }
 

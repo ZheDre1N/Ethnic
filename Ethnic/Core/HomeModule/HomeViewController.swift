@@ -17,6 +17,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - NIB ACTIONS.
     @IBAction func sourceLanguageButtonTapped(_ sender: UIButton) {
+        presenter.goToLanguageSelectionScreen(from: self)
         print("source")
     }
     
@@ -25,6 +26,7 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func targetLanguageButtonTapped(_ sender: UIButton) {
+        presenter.goToLanguageSelectionScreen(from: self)
         print("target")
     }
     

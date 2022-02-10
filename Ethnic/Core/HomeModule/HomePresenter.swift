@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     func setTargetText(targetText: String)
@@ -6,6 +7,8 @@ protocol HomeViewProtocol: AnyObject {
 
 protocol HomeViewPresenterProtocol: AnyObject {
     init(view: HomeViewProtocol, router: HomeRouterProtocol, translateManager: TranslateManagerProtocol)
+    
+    func goToLanguageSelectionScreen(from: UIViewController)
     
     func translateText(sourceText: String)
     func updateTargetTextView(targetText: String)
@@ -41,5 +44,9 @@ final class HomePresenter: HomeViewPresenterProtocol {
     
     func updateTargetTextView(targetText: String) {
         self.view?.setTargetText(targetText: targetText)
+    }
+    
+    func goToLanguageSelectionScreen(from viewController: UIViewController) {
+        router.goToChangeLanguageScreen(from: viewController)
     }
 }

@@ -8,6 +8,7 @@ final class SettingsViewController: UIViewController {
     // MARK: - View controller life cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Настройки"
     }
 }
 

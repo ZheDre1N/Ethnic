@@ -2,6 +2,7 @@ import UIKit
 
 protocol HomeRouterProtocol {
     var navigationController: UINavigationController { get set }
+    func goToChangeLanguageScreen(from: UIViewController)
 }
 
 final class HomeRouter: HomeRouterProtocol {
@@ -12,5 +13,10 @@ final class HomeRouter: HomeRouterProtocol {
         self.navigationController = navigationController
         let view = assemblyBuilder.createHomeModule(router: self)
         navigationController.viewControllers = [view]
+    }
+    
+    func goToChangeLanguageScreen(from viewController: UIViewController) {
+        let view = assemblyBuilder.createLanguageSelectionModule(router: self)
+        viewController.present(view, animated: true, completion: nil)
     }
 }

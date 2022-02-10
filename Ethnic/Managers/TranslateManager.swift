@@ -10,7 +10,6 @@ protocol TranslateManagerProtocol {
 }
 
 class TranslateManager: TranslateManagerProtocol {
-
     func translateText(
         sourceLanguageKey: String,
         targetLanguageKey: String,

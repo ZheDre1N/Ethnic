@@ -2,6 +2,7 @@ import UIKit
 
 protocol AssemblyBuilderProtocol {
     func createHomeModule(router: HomeRouterProtocol) -> UIViewController
+    func createLanguageSelectionModule(router: HomeRouterProtocol) -> UIViewController
     func createSavedModule(router: SavedRouterProtocol) -> UIViewController
     func createSettingsModule(router: SettingsRouterProtocol) -> UIViewController
 }
