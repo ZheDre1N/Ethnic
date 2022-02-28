@@ -44,7 +44,7 @@
                                 <constraint firstAttribute="width" constant="32" id="EiE-5H-V51"/>
                                 <constraint firstAttribute="height" constant="32" id="tuW-Nr-fZ3"/>
                             </constraints>
-                            <buttonConfiguration key="configuration" style="gray"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

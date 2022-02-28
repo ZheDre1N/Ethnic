@@ -4,18 +4,15 @@ protocol SavedViewProtocol: AnyObject {
 }
 
 protocol SavedViewPresenterProtocol: AnyObject {
-    init(view: SavedViewProtocol, router: SavedRouterProtocol)
-    
-
+  init(view: SavedViewProtocol, router: SavedRouterProtocol)
 }
 
 final class SavedPresenter: SavedViewPresenterProtocol {
+  weak var view: SavedViewProtocol?
+  var router: SavedRouterProtocol
 
-    weak var view: SavedViewProtocol?
-    var router: SavedRouterProtocol
-        
-    required init(view: SavedViewProtocol, router: SavedRouterProtocol) {
-        self.view = view
-        self.router = router
-    }
+  required init(view: SavedViewProtocol, router: SavedRouterProtocol) {
+    self.view = view
+    self.router = router
+  }
 }

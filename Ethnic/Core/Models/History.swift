@@ -1,5 +1,5 @@
 import Foundation
 
 struct History {
-    var history = [Translation]()
+  var history: [Translation] = []
 }
