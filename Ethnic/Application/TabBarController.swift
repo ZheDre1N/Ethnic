@@ -1,7 +1,7 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-        
+    
     let home = HomeRouter()
     let saved = SavedRouter()
     let settings = SettingsRouter()
@@ -29,8 +29,7 @@ final class TabBarController: UITabBarController {
     }
     
     private func customizeAppearance() {
-            //Set the item tint colors
-            tabBar.tintColor = .black
-            tabBar.unselectedItemTintColor = .lightGray
+        tabBar.tintColor = .label
+        tabBar.unselectedItemTintColor = .secondaryLabel
     }
 }

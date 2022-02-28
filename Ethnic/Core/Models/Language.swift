@@ -1,7 +1,11 @@
 import Foundation
 
-struct Language {
-    let name: String
-    let key: String
-    let isAvailable: Bool
+protocol LanguageProtocol {
+    var name: String { get }
+    var key: String { get }
+}
+
+struct Language: LanguageProtocol {
+    var name: String
+    var key: String
 }

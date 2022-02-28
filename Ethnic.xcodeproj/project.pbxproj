@@ -11,6 +11,7 @@
 		18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5B9EF2732FF9F0071BEBB /* SceneDelegate.swift */; };
 		18F5B9F72732FFA00071BEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F62732FFA00071BEBB /* Assets.xcassets */; };
 		18F5B9FA2732FFA00071BEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F82732FFA00071BEBB /* LaunchScreen.storyboard */; };
+		DF05B6E427CA02620018D184 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF05B6E327CA02620018D184 /* NetworkManager.swift */; };
 		DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67046E27A836E800AA3F8F /* TabBarController.swift */; };
 		DF67047127A849FE00AA3F8F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047027A849FE00AA3F8F /* HomeRouter.swift */; };
 		DF67047327A84B0C00AA3F8F /* SavedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047227A84B0C00AA3F8F /* SavedRouter.swift */; };
@@ -46,6 +47,7 @@
 		18F5B9F62732FFA00071BEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F5B9F92732FFA00071BEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F5B9FB2732FFA00071BEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF05B6E327CA02620018D184 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DF67046E27A836E800AA3F8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF67047027A849FE00AA3F8F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DF67047227A84B0C00AA3F8F /* SavedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRouter.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		DF67046D27A832DD00AA3F8F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DF05B6E327CA02620018D184 /* NetworkManager.swift */,
 				E91A8BAF273FEDE600CE7FBF /* TranslateManager.swift */,
 				DF985F7827B339E9003FA460 /* StorageManager.swift */,
 			);
@@ -266,6 +269,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F5B9FE2732FFA00071BEBB /* Build configuration list for PBXNativeTarget "Ethnic" */;
 			buildPhases = (
+				DF0666BF27CD0B1E00A8B7C4 /* ShellScript */,
 				18F5B9E62732FF9F0071BEBB /* Sources */,
 				18F5B9E72732FF9F0071BEBB /* Frameworks */,
 				18F5B9E82732FF9F0071BEBB /* Resources */,
@@ -328,6 +332,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DF0666BF27CD0B1E00A8B7C4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18F5B9E62732FF9F0071BEBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -355,6 +379,7 @@
 				DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */,
 				DFC3432927B0FEB300F1D160 /* SavedViewController.swift in Sources */,
 				DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */,
+				DF05B6E427CA02620018D184 /* NetworkManager.swift in Sources */,
 				DF985F7727B337AC003FA460 /* Language.swift in Sources */,
 				DF985F7927B339E9003FA460 /* StorageManager.swift in Sources */,
 			);
@@ -515,7 +540,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -544,7 +569,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
