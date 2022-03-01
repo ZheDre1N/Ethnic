@@ -1,11 +1,11 @@
 import UIKit
 
-protocol HomeRouterProtocol {
+protocol HomeCoordinatorProtocol {
   var navigationController: UINavigationController { get set }
   func goToChangeLanguageScreen(from: UIViewController)
 }
 
-final class HomeRouter: HomeRouterProtocol {
+final class HomeCoordinator: HomeCoordinatorProtocol {
   var navigationController: UINavigationController
   let assemblyBuilder = AssemblyBuilder()
 

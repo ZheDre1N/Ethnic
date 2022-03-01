@@ -1,9 +1,9 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-  let home = HomeRouter()
-  let saved = SavedRouter()
-  let settings = SettingsRouter()
+  let home = HomeCoordinator()
+  let saved = SavedCoordinator()
+  let settings = SettingsCoordinator()
 
   override func viewDidLoad() {
     super.viewDidLoad()

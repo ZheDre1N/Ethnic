@@ -1,10 +1,10 @@
 import UIKit
 
-protocol SavedRouterProtocol {
+protocol SavedCoordinatorProtocol {
   var navigationController: UINavigationController { get set }
 }
 
-final class SavedRouter: SavedRouterProtocol {
+final class SavedCoordinator: SavedCoordinatorProtocol {
   var navigationController: UINavigationController
   let assemblyBuilder = AssemblyBuilder()
 

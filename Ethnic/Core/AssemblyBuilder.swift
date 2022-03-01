@@ -1,15 +1,15 @@
 import UIKit
 
 protocol AssemblyBuilderProtocol {
-  func createHomeModule(router: HomeRouterProtocol) -> UIViewController
-  func createLanguageSelectionModule(router: HomeRouterProtocol) -> UIViewController
-  func createSavedModule(router: SavedRouterProtocol) -> UIViewController
-  func createSettingsModule(router: SettingsRouterProtocol) -> UIViewController
+  func createHomeModule(router: HomeCoordinatorProtocol) -> UIViewController
+  func createLanguageSelectionModule(router: HomeCoordinatorProtocol) -> UIViewController
+  func createSavedModule(router: SavedCoordinatorProtocol) -> UIViewController
+  func createSettingsModule(router: SettingsCoordinatorProtocol) -> UIViewController
 }
 
 final class AssemblyBuilder: AssemblyBuilderProtocol {
   // MARK: - Home tabs.
-  func createHomeModule(router: HomeRouterProtocol) -> UIViewController {
+  func createHomeModule(router: HomeCoordinatorProtocol) -> UIViewController {
     let view = HomeViewController()
     let translateManager = TranslateManager()
     let presenter = HomePresenter(view: view, router: router, translateManager: translateManager)
@@ -17,7 +17,7 @@ final class AssemblyBuilder: AssemblyBuilderProtocol {
     return view
   }
 
-  func createLanguageSelectionModule(router: HomeRouterProtocol) -> UIViewController {
+  func createLanguageSelectionModule(router: HomeCoordinatorProtocol) -> UIViewController {
     let view = LanguageSelectionViewController()
     let presenter = LanguageSelectionPresenter(view: view, router: router)
     view.presenter = presenter
@@ -25,7 +25,7 @@ final class AssemblyBuilder: AssemblyBuilderProtocol {
   }
 
   // MARK: - Saved tabs.
-  func createSavedModule(router: SavedRouterProtocol) -> UIViewController {
+  func createSavedModule(router: SavedCoordinatorProtocol) -> UIViewController {
     let view = SavedViewController()
     let presenter = SavedPresenter(view: view, router: router)
     view.presenter = presenter
@@ -33,7 +33,7 @@ final class AssemblyBuilder: AssemblyBuilderProtocol {
   }
 
   // MARK: - Settings tabs.
-  func createSettingsModule(router: SettingsRouterProtocol) -> UIViewController {
+  func createSettingsModule(router: SettingsCoordinatorProtocol) -> UIViewController {
     let view = SettingsViewController()
     let presenter = SettingsPresenter(view: view, router: router)
     view.presenter = presenter

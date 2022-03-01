@@ -6,7 +6,7 @@ protocol HomeViewProtocol: AnyObject {
 }
 
 protocol HomeViewPresenterProtocol: AnyObject {
-  init(view: HomeViewProtocol, router: HomeRouterProtocol, translateManager: TranslateManagerProtocol)
+  init(view: HomeViewProtocol, router: HomeCoordinatorProtocol, translateManager: TranslateManagerProtocol)
   func goToLanguageSelectionScreen(from: UIViewController)
   func translateText(sourceText: String)
   func updateTargetTextView(targetText: String)
@@ -14,10 +14,10 @@ protocol HomeViewPresenterProtocol: AnyObject {
 
 final class HomePresenter: HomeViewPresenterProtocol {
   weak var view: HomeViewProtocol?
-  var router: HomeRouterProtocol
+  var router: HomeCoordinatorProtocol
   var translateManager: TranslateManagerProtocol
 
-  required init(view: HomeViewProtocol, router: HomeRouterProtocol, translateManager: TranslateManagerProtocol) {
+  required init(view: HomeViewProtocol, router: HomeCoordinatorProtocol, translateManager: TranslateManagerProtocol) {
     self.view = view
     self.router = router
     self.translateManager = translateManager
