@@ -12,7 +12,7 @@ protocol LanguageSelectionViewPresenterProtocol: AnyObject {
 final class LanguageSelectionPresenter: LanguageSelectionViewPresenterProtocol {
   weak var view: LanguageSelectionViewProtocol?
   var router: HomeRouterProtocol
-  var dataSource = StorageManager().getLanguages()
+  var dataSource = StorageManager().getListOfLanguages()
 
   required init(view: LanguageSelectionViewProtocol, router: HomeRouterProtocol) {
     self.view = view

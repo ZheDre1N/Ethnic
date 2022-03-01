@@ -8,7 +8,6 @@ final class HomeViewController: UIViewController {
 
   // MARK: - NIB OUTLETS.
   @IBOutlet weak var sourceTextView: UITextView!
-  @IBOutlet weak var targetTextView: UITextView!
 
   // MARK: - View controller life cycle.
   override func viewDidLoad() {
@@ -40,6 +39,6 @@ final class HomeViewController: UIViewController {
 // MARK: - HomeViewProtocol.
 extension HomeViewController: HomeViewProtocol {
   func setTargetText(targetText: String) {
-    targetTextView.text = targetText
+//    targetTextView.text = targetText
   }
 }

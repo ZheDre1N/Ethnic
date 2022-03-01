@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Ethnic" customModuleProvider="target">
             <connections>
                 <outlet property="sourceTextView" destination="f0h-7b-Yzf" id="GXK-bc-eTc"/>
-                <outlet property="targetTextView" destination="h5Y-eY-8sj" id="PF5-z0-Ev7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -98,24 +97,11 @@
                         <action selector="translateButtonTapped:" destination="-1" eventType="touchUpInside" id="YpV-R5-4Gu"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h5Y-eY-8sj">
-                    <rect key="frame" x="0.0" y="399" width="414" height="260"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="260" id="aa5-TE-6nu"/>
-                    </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="f0h-7b-Yzf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B7N-xw-FYG"/>
-                <constraint firstItem="h5Y-eY-8sj" firstAttribute="top" secondItem="Gl2-x8-BQh" secondAttribute="bottom" constant="8" id="HJi-Bi-h4b"/>
-                <constraint firstItem="h5Y-eY-8sj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="NDR-cP-9Rz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iiN-X0-jFF" secondAttribute="trailing" id="O0P-A2-JAR"/>
                 <constraint firstItem="f0h-7b-Yzf" firstAttribute="top" secondItem="iiN-X0-jFF" secondAttribute="bottom" id="RDa-8b-imD"/>
                 <constraint firstItem="hCI-4J-zTW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RGZ-cu-EoZ"/>
@@ -126,7 +112,6 @@
                 <constraint firstItem="iiN-X0-jFF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dwN-b5-hRZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gl2-x8-BQh" secondAttribute="trailing" constant="40" id="j25-On-U21"/>
                 <constraint firstItem="Gl2-x8-BQh" firstAttribute="top" secondItem="f0h-7b-Yzf" secondAttribute="bottom" constant="8" id="kFN-OK-gjh"/>
-                <constraint firstItem="h5Y-eY-8sj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ogD-n5-W6d"/>
                 <constraint firstItem="f0h-7b-Yzf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xvN-mt-vzj"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
