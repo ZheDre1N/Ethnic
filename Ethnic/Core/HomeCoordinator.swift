@@ -9,8 +9,8 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
   var navigationController: UINavigationController
   let assemblyBuilder = AssemblyBuilder()
 
-  required init(navigationController: UINavigationController = UINavigationController()) {
-    self.navigationController = navigationController
+  required init() {
+    self.navigationController = UINavigationController()
     let view = assemblyBuilder.createHomeModule(router: self)
     navigationController.viewControllers = [view]
   }

@@ -1,13 +1,19 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-  let home = HomeCoordinator()
-  let saved = SavedCoordinator()
-  let settings = SettingsCoordinator()
+  // swiftlint:disable implicitly_unwrapped_optional
+  var home: HomeCoordinatorProtocol!
+  var saved: SavedCoordinatorProtocol!
+  var settings: SettingsCoordinatorProtocol!
+  // swiftlint:enable implicitly_unwrapped_optional
+
 
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     viewControllers = [
       home.navigationController,
       saved.navigationController,
@@ -17,7 +23,6 @@ final class TabBarController: UITabBarController {
     configureTabBars()
     customizeAppearance()
   }
-
   private func configureTabBars() {
     home.navigationController.tabBarItem = UITabBarItem(
       title: "Переводчик",
