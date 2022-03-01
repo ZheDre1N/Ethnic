@@ -81,4 +81,7 @@ class TranslateManager: TranslateManagerProtocol {
     let targetText = decodedData.data
     return targetText
   }
+
+  private func addToHistory(translate: TranslationProtocol) {
+  }
 }

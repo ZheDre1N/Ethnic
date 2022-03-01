@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="Ethnic" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="uoc-pb-GE5" id="C0i-Ok-HUp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,14 +19,29 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uoc-pb-GE5">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="132"/>
+            <constraints>
+                <constraint firstItem="uoc-pb-GE5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4uO-6w-XQh"/>
+                <constraint firstAttribute="trailing" secondItem="uoc-pb-GE5" secondAttribute="trailing" id="QDi-Pk-mep"/>
+                <constraint firstItem="uoc-pb-GE5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QZW-8A-sQ3"/>
+                <constraint firstAttribute="bottom" secondItem="uoc-pb-GE5" secondAttribute="bottom" id="zUB-pJ-DJh"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
     </objects>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

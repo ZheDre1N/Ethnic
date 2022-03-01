@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavedViewController" customModule="Ethnic" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="qFg-HC-ArT" id="m49-d6-3U8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,14 +19,29 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qFg-HC-ArT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="132"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qFg-HC-ArT" secondAttribute="bottom" id="25j-dv-s03"/>
+                <constraint firstItem="qFg-HC-ArT" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="7EI-0q-KDM"/>
+                <constraint firstItem="qFg-HC-ArT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OH0-sY-PTZ"/>
+                <constraint firstItem="qFg-HC-ArT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QAv-cS-uZS"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
     </objects>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

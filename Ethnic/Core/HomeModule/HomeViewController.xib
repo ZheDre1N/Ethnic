@@ -42,8 +42,8 @@
                                 <action selector="targetLanguageButtonTapped:" destination="-1" eventType="touchUpInside" id="mub-W1-xPG"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7e-4h-NJ1">
-                            <rect key="frame" x="0.0" y="0.0" width="173.5" height="48"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7e-4h-NJ1">
+                            <rect key="frame" x="-1" y="0.0" width="173.5" height="48"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Русский"/>
                             <connections>
