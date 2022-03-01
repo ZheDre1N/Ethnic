@@ -9,6 +9,7 @@ protocol StorageManagerProtocol {
   // save
   func saveUsersSourceLanguage(sourceLanguage: LanguageProtocol)
   func saveUsersTargetLanguage(targetLanguage: LanguageProtocol)
+  func addToHistory(tranlation: TranslationProtocol)
 }
 
 class StorageManager: StorageManagerProtocol {
@@ -49,5 +50,9 @@ class StorageManager: StorageManagerProtocol {
 
   func saveUsersTargetLanguage(targetLanguage: LanguageProtocol) {
     UserDefaults.standard.set(targetLanguage, forKey: "targetLanguage")
+  }
+
+  func addToHistory(tranlation: TranslationProtocol) {
+    UserDefaults.standard.set(tranlation, forKey: "history")
   }
 }

@@ -83,5 +83,6 @@ class TranslateManager: TranslateManagerProtocol {
   }
 
   private func addToHistory(translate: TranslationProtocol) {
+    StorageManager().addToHistory(tranlation: translate)
   }
 }
