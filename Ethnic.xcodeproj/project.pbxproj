@@ -33,6 +33,7 @@
 		DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1627B31F3A007B0EAA /* Translation.swift */; };
 		DFC54C1927B31F9C007B0EAA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1827B31F9C007B0EAA /* History.swift */; };
 		DFDB80D927CE1B0900357B9F /* TranslateManagerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB80D827CE1B0900357B9F /* TranslateManagerProxy.swift */; };
+		DFDB80DC27CE547B00357B9F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB80DB27CE547B00357B9F /* SettingsCell.swift */; };
 		DFF496D927B0487D00EBF4C9 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */; };
 		DFF496DB27B04C9500EBF4C9 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */; };
 		DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DE27B0643900EBF4C9 /* HomePresenter.swift */; };
@@ -70,6 +71,7 @@
 		DFC54C1627B31F3A007B0EAA /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		DFC54C1827B31F9C007B0EAA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DFDB80D827CE1B0900357B9F /* TranslateManagerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateManagerProxy.swift; sourceTree = "<group>"; };
+		DFDB80DB27CE547B00357B9F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		DFF496DE27B0643900EBF4C9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		18F5BA2E273316440071BEBB /* SettingsModule */ = {
 			isa = PBXGroup;
 			children = (
+				DFDB80DA27CE4FA300357B9F /* Cell */,
 				DFDB80D727CE17F200357B9F /* Models */,
 				DFC3433127B1014600F1D160 /* SettingsPresenter.swift */,
 				DFC3432D27B1013300F1D160 /* SettingsViewController.swift */,
@@ -246,6 +249,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DFDB80DA27CE4FA300357B9F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DFDB80DB27CE547B00357B9F /* SettingsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DFE5895427B3B0B7002C71F8 /* Errors */ = {
@@ -388,6 +399,7 @@
 				DF67047327A84B0C00AA3F8F /* SavedCoordinator.swift in Sources */,
 				E91A8BB0273FEDE600CE7FBF /* TranslateManager.swift in Sources */,
 				DFC54C0C27B2C166007B0EAA /* HTTPMethod.swift in Sources */,
+				DFDB80DC27CE547B00357B9F /* SettingsCell.swift in Sources */,
 				DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */,
 				DFC3432927B0FEB300F1D160 /* SavedViewController.swift in Sources */,
 				DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */,

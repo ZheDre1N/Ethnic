@@ -8,8 +8,11 @@ final class SavedCoordinator: SavedCoordinatorProtocol {
   var navigationController: UINavigationController
   let assemblyBuilder = AssemblyBuilder()
 
-  required init(navigationController: UINavigationController = UINavigationController()) {
-    self.navigationController = navigationController
+  required init() {
+    let navVC = UINavigationController()
+    navVC.navigationBar.prefersLargeTitles = true
+
+    self.navigationController = navVC
     let view = assemblyBuilder.createSavedModule(router: self)
     navigationController.viewControllers = [view]
   }
