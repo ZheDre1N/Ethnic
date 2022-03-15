@@ -2,6 +2,7 @@ import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
+  let assemblyBuilder = AssemblyBuilder()
 
   func scene(
     _ scene: UIScene,
@@ -11,21 +12,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
 
     window = UIWindow(windowScene: windowScene)
-    let tabBarController = makeTabBarController()
-    window?.rootViewController = tabBarController
+    window?.rootViewController = TabBarController()
     window?.makeKeyAndVisible()
-  }
-
-  private func makeTabBarController() -> UITabBarController {
-    let tabBarController = TabBarController()
-
-    let homeCoordinator = HomeCoordinator()
-    let savedCoordinator = SavedCoordinator()
-    let settingCoordinator = SettingsCoordinator()
-
-    tabBarController.home = homeCoordinator
-    tabBarController.saved = savedCoordinator
-    tabBarController.settings = settingCoordinator
-    return tabBarController
   }
 }

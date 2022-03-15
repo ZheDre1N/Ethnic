@@ -1,5 +1,9 @@
 import UIKit
 
+protocol HomeViewProtocol: AnyObject {
+  func setTargetText(targetText: String)
+}
+
 final class HomeViewController: UIViewController {
   // MARK: - Properties.
   // swiftlint:disable implicitly_unwrapped_optional

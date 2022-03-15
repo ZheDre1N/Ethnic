@@ -7,16 +7,17 @@ protocol HomeCoordinatorProtocol {
 
 final class HomeCoordinator: HomeCoordinatorProtocol {
   var navigationController: UINavigationController
-  let assemblyBuilder = AssemblyBuilder()
 
   required init() {
-    self.navigationController = UINavigationController()
-    let view = assemblyBuilder.createHomeModule(router: self)
+    let navVC = UINavigationController()
+    navVC.navigationBar.prefersLargeTitles = true
+    self.navigationController = navVC
+    let view = AssemblyBuilder.createHomeModule()
     navigationController.viewControllers = [view]
   }
 
   func goToChangeLanguageScreen(from viewController: UIViewController) {
-    let view = assemblyBuilder.createLanguageSelectionModule(router: self)
+    let view = AssemblyBuilder.createLanguageSelectionModule()
     viewController.present(view, animated: true, completion: nil)
   }
 }

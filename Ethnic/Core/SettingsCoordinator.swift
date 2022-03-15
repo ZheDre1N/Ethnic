@@ -6,14 +6,13 @@ protocol SettingsCoordinatorProtocol {
 
 final class SettingsCoordinator: SettingsCoordinatorProtocol {
   var navigationController: UINavigationController
-  let assemblyBuilder = AssemblyBuilder()
 
   required init() {
     let navVC = UINavigationController()
     navVC.navigationBar.prefersLargeTitles = true
-    
+
     self.navigationController = navVC
-    let view = assemblyBuilder.createSettingsModule(router: self)
+    let view = AssemblyBuilder.createSettingsModule()
     navigationController.viewControllers = [view]
   }
 }

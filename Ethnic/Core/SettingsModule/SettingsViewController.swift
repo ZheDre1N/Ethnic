@@ -15,7 +15,7 @@ final class SettingsViewController: UIViewController {
     title = "Настройки"
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.register(SettingsViewCell.self, forCellReuseIdentifier: SettingsViewCell.description())
+    tableView.register(DefaultSettingsViewCell.self, forCellReuseIdentifier: DefaultSettingsViewCell.description())
   }
 }
 
@@ -41,7 +41,7 @@ extension SettingsViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: SettingsViewCell.description(), for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: DefaultSettingsViewCell.description(), for: indexPath)
     let cellDataSource = presenter.dataSource[indexPath.row]
 
     var content = cell.defaultContentConfiguration()

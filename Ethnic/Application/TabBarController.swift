@@ -1,50 +1,42 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-  // swiftlint:disable implicitly_unwrapped_optional
-  var home: HomeCoordinatorProtocol!
-  var saved: SavedCoordinatorProtocol!
-  var settings: SettingsCoordinatorProtocol!
-  // swiftlint:enable implicitly_unwrapped_optional
-
+  let home: HomeCoordinator = .init()
+  let saved: SavedCoordinator = .init()
+  let settings: SettingsCoordinator = .init()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
     viewControllers = [
       home.navigationController,
       saved.navigationController,
       settings.navigationController
     ]
-
     configureTabBars()
-    customizeAppearance()
+    customizeTabBarsAppearance()
   }
+
   private func configureTabBars() {
     home.navigationController.tabBarItem = UITabBarItem(
       title: "Переводчик",
       image: UIImage(systemName: "house"),
-      tag: 0
+      selectedImage: UIImage(systemName: "house.fill")
     )
-    home.navigationController.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
+
     saved.navigationController.tabBarItem = UITabBarItem(
       title: "Сохраненное",
       image: UIImage(systemName: "star"),
-      tag: 1
+      selectedImage: UIImage(systemName: "star.fill")
     )
-    saved.navigationController.tabBarItem.selectedImage = UIImage(systemName: "star.fill")
+
     settings.navigationController.tabBarItem = UITabBarItem(
       title: "Настройки",
       image: UIImage(systemName: "gearshape.2"),
-      tag: 2
+      selectedImage: UIImage(systemName: "gearshape.2.fill")
     )
-    settings.navigationController.tabBarItem.selectedImage = UIImage(systemName: "gearshape.2.fill")
   }
 
-  private func customizeAppearance() {
+  private func customizeTabBarsAppearance() {
     tabBar.tintColor = .label
     tabBar.unselectedItemTintColor = .secondaryLabel
   }

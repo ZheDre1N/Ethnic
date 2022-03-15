@@ -4,18 +4,16 @@ protocol SettingsViewProtocol: AnyObject {
 }
 
 protocol SettingsViewPresenterProtocol: AnyObject {
-  init(view: SettingsViewProtocol, router: SettingsCoordinatorProtocol)
+  init(view: SettingsViewProtocol)
 
   var dataSource: [LanguageProtocol] { get }
 }
 
 final class SettingsPresenter: SettingsViewPresenterProtocol {
   weak var view: SettingsViewProtocol?
-  var router: SettingsCoordinatorProtocol
   var dataSource = StorageManager().getListOfLanguages()
 
-  required init(view: SettingsViewProtocol, router: SettingsCoordinatorProtocol) {
+  required init(view: SettingsViewProtocol) {
     self.view = view
-    self.router = router
   }
 }

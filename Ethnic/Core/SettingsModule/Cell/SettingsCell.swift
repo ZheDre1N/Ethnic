@@ -7,11 +7,11 @@
 
 import UIKit
 
-class SettingsViewCell: UITableViewCell {
+class DefaultSettingsViewCell: UITableViewCell {
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: .default, reuseIdentifier: reuseIdentifier)
   }
-  
+
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }

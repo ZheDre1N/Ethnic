@@ -1,41 +1,40 @@
 import UIKit
 
 protocol AssemblyBuilderProtocol {
-  func createHomeModule(router: HomeCoordinatorProtocol) -> UIViewController
-  func createLanguageSelectionModule(router: HomeCoordinatorProtocol) -> UIViewController
-  func createSavedModule(router: SavedCoordinatorProtocol) -> UIViewController
-  func createSettingsModule(router: SettingsCoordinatorProtocol) -> UIViewController
+  static func createHomeModule() -> UIViewController
+  static func createLanguageSelectionModule() -> UIViewController
+  static func createSavedModule() -> UIViewController
+  static func createSettingsModule() -> UIViewController
 }
 
 final class AssemblyBuilder: AssemblyBuilderProtocol {
   // MARK: - Home tabs.
-  func createHomeModule(router: HomeCoordinatorProtocol) -> UIViewController {
+  static func createHomeModule() -> UIViewController {
     let view = HomeViewController()
-    let translateManager = TranslateManager()
-    let presenter = HomePresenter(view: view, router: router, translateManager: translateManager)
+    let presenter = HomePresenter(view: view)
     view.presenter = presenter
     return view
   }
 
-  func createLanguageSelectionModule(router: HomeCoordinatorProtocol) -> UIViewController {
+  static func createLanguageSelectionModule() -> UIViewController {
     let view = LanguageSelectionViewController()
-    let presenter = LanguageSelectionPresenter(view: view, router: router)
+    let presenter = LanguageSelectionPresenter(view: view)
     view.presenter = presenter
     return view
   }
 
   // MARK: - Saved tabs.
-  func createSavedModule(router: SavedCoordinatorProtocol) -> UIViewController {
+  static func createSavedModule() -> UIViewController {
     let view = SavedViewController()
-    let presenter = SavedPresenter(view: view, router: router)
+    let presenter = SavedPresenter(view: view)
     view.presenter = presenter
     return view
   }
 
   // MARK: - Settings tabs.
-  func createSettingsModule(router: SettingsCoordinatorProtocol) -> UIViewController {
+  static func createSettingsModule() -> UIViewController {
     let view = SettingsViewController()
-    let presenter = SettingsPresenter(view: view, router: router)
+    let presenter = SettingsPresenter(view: view)
     view.presenter = presenter
     return view
   }
