@@ -1,10 +1,6 @@
 import UIKit
 
 final class HomeCoordinator: ChildCoordinatable {
-  func start() {
-    //
-  }
-
   var navigationController: UINavigationController
 
   required init() {
@@ -12,9 +8,11 @@ final class HomeCoordinator: ChildCoordinatable {
     navVC.navigationBar.prefersLargeTitles = true
     self.navigationController = navVC
     let view = ScreensFactory.createHomeModule()
-    self.navigationController.pushViewController(view, animated: true)
+    self.navigationController.pushViewController(view, animated: false)
   }
+}
 
+extension HomeCoordinator {
   func goToChangeLanguageScreen(from viewController: UIViewController) {
     let view = ScreensFactory.createLanguageSelectionModule()
     viewController.present(view, animated: true, completion: nil)

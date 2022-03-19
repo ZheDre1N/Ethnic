@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol ChildCoordinatable: AppCoordinatable {
+protocol ChildCoordinatable {
   var navigationController: UINavigationController { get set }
 }
