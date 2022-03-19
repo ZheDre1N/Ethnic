@@ -12,9 +12,9 @@ final class ScreensFactory: ScreensFactorable {
   // MARK: - Tabs.
   static func createTabBarController() -> UITabBarController {
     let tabBarController = TabBarController(
-      home = HomeCoordinator(),
-      saved = SavedCoordinator(),
-      settings = SettingsCoordinator()
+      home: HomeCoordinator(),
+      saved: SavedCoordinator(),
+      settings: SettingsCoordinator()
     )
     return tabBarController
   }

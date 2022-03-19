@@ -4,7 +4,7 @@ final class SettingsCoordinator: ChildCoordinatable {
   func start() {
     //
   }
-  
+
   var navigationController: UINavigationController
 
   required init() {

@@ -4,7 +4,7 @@ final class SavedCoordinator: ChildCoordinatable {
   func start() {
     //
   }
-  
+
   var navigationController: UINavigationController
 
   required init() {

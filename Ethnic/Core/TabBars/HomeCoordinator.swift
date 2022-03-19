@@ -4,7 +4,7 @@ final class HomeCoordinator: ChildCoordinatable {
   func start() {
     //
   }
-  
+
   var navigationController: UINavigationController
 
   required init() {
