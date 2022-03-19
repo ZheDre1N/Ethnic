@@ -2,7 +2,7 @@ import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
-  let assemblyBuilder = AssemblyBuilder()
+  var appCoordinator: Coordinatable?
 
   func scene(
     _ scene: UIScene,
@@ -12,7 +12,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
 
     window = UIWindow(windowScene: windowScene)
-    window?.rootViewController = TabBarController()
-    window?.makeKeyAndVisible()
+    appCoordinator = AppCoordinator(window: window)
+    appCoordinator?.start()
   }
 }

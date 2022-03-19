@@ -1,9 +1,9 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-  let home: HomeCoordinator = .init()
-  let saved: SavedCoordinator = .init()
-  let settings: SettingsCoordinator = .init()
+  let home = HomeCoordinator()
+  let saved = SavedCoordinator()
+  let settings = SettingsCoordinator()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -15,6 +15,7 @@ final class TabBarController: UITabBarController {
     configureTabBars()
     customizeTabBarsAppearance()
   }
+
 
   private func configureTabBars() {
     home.navigationController.tabBarItem = UITabBarItem(
