@@ -1,8 +1,15 @@
+//
+//  SceneDelegate.swift
+//  Ethnic
+//
+//  Created by Eugene Dudkin on 19.03.2022.
+//
+
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
-  var appCoordinator: Coordinatable?
+  var appCoordinator: AppCoordinatable?
 
   func scene(
     _ scene: UIScene,

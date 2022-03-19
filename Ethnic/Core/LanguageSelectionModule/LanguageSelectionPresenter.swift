@@ -11,7 +11,6 @@ protocol LanguageSelectionViewPresenterProtocol: AnyObject {
 
 final class LanguageSelectionPresenter: LanguageSelectionViewPresenterProtocol {
   weak var view: LanguageSelectionViewProtocol?
-  var coordinator: HomeCoordinatorProtocol?
   var dataSource = StorageManager().getListOfLanguages()
 
   required init(view: LanguageSelectionViewProtocol) {

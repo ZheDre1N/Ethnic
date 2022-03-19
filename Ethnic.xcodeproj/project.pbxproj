@@ -20,7 +20,8 @@
 		DF985F7927B339E9003FA460 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF985F7827B339E9003FA460 /* StorageManager.swift */; };
 		DF985F7B27B33B70003FA460 /* TranslateManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF985F7A27B33B70003FA460 /* TranslateManagerError.swift */; };
 		DFA7D05027E65C7F0021C1BE /* AuthorizedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7D04F27E65C7F0021C1BE /* AuthorizedCoordinator.swift */; };
-		DFA7D05327E6617D0021C1BE /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7D05227E6617D0021C1BE /* Coordinatable.swift */; };
+		DFA7D05327E6617D0021C1BE /* AppCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7D05227E6617D0021C1BE /* AppCoordinatable.swift */; };
+		DFA7D05927E678EC0021C1BE /* ChildCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7D05827E678EC0021C1BE /* ChildCoordinatable.swift */; };
 		DFC3432127B0F0AD00F1D160 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3431F27B0F0AD00F1D160 /* LanguageSelectionViewController.swift */; };
 		DFC3432227B0F0AD00F1D160 /* LanguageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC3432027B0F0AD00F1D160 /* LanguageSelectionViewController.xib */; };
 		DFC3432427B0F15200F1D160 /* LanguageSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3432327B0F15200F1D160 /* LanguageSelectionPresenter.swift */; };
@@ -38,7 +39,7 @@
 		DFD51B5427E6362700EDB763 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD51B5327E6362700EDB763 /* AppCoordinator.swift */; };
 		DFDB80DC27CE547B00357B9F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB80DB27CE547B00357B9F /* SettingsCell.swift */; };
 		DFF496D927B0487D00EBF4C9 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */; };
-		DFF496DB27B04C9500EBF4C9 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */; };
+		DFF496DB27B04C9500EBF4C9 /* ScreensFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DA27B04C9500EBF4C9 /* ScreensFactory.swift */; };
 		DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496DE27B0643900EBF4C9 /* HomePresenter.swift */; };
 		DFF496E227B06B2000EBF4C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496E027B06B2000EBF4C9 /* HomeViewController.swift */; };
 		DFF496E327B06B2000EBF4C9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF496E127B06B2000EBF4C9 /* HomeViewController.xib */; };
@@ -61,7 +62,8 @@
 		DF985F7827B339E9003FA460 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		DF985F7A27B33B70003FA460 /* TranslateManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateManagerError.swift; sourceTree = "<group>"; };
 		DFA7D04F27E65C7F0021C1BE /* AuthorizedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedCoordinator.swift; sourceTree = "<group>"; };
-		DFA7D05227E6617D0021C1BE /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		DFA7D05227E6617D0021C1BE /* AppCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatable.swift; sourceTree = "<group>"; };
+		DFA7D05827E678EC0021C1BE /* ChildCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinatable.swift; sourceTree = "<group>"; };
 		DFC3431F27B0F0AD00F1D160 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
 		DFC3432027B0F0AD00F1D160 /* LanguageSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageSelectionViewController.xib; sourceTree = "<group>"; };
 		DFC3432327B0F15200F1D160 /* LanguageSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionPresenter.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 		DFD51B5327E6362700EDB763 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DFDB80DB27CE547B00357B9F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
-		DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		DFF496DA27B04C9500EBF4C9 /* ScreensFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensFactory.swift; sourceTree = "<group>"; };
 		DFF496DE27B0643900EBF4C9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		DFF496E027B06B2000EBF4C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFF496E127B06B2000EBF4C9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -157,12 +159,9 @@
 		18F5BA07273306D80071BEBB /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				DFA7D05127E65C8C0021C1BE /* Coordinators */,
-				DF67046E27A836E800AA3F8F /* TabBarController.swift */,
-				DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */,
-				DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */,
-				DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */,
-				DFF496DA27B04C9500EBF4C9 /* AssemblyBuilder.swift */,
+				DFA7D05127E65C8C0021C1BE /* AppFlow */,
+				DFA7D05627E672180021C1BE /* TabBars */,
+				DFA7D05727E672440021C1BE /* Factories */,
 				DFC54C0627B25F25007B0EAA /* Models */,
 				18F5BA2C273316340071BEBB /* HomeModule */,
 				DFF496D627B0455000EBF4C9 /* LanguageSelectionModule */,
@@ -214,13 +213,32 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		DFA7D05127E65C8C0021C1BE /* Coordinators */ = {
+		DFA7D05127E65C8C0021C1BE /* AppFlow */ = {
 			isa = PBXGroup;
 			children = (
 				DFD51B5327E6362700EDB763 /* AppCoordinator.swift */,
 				DFA7D04F27E65C7F0021C1BE /* AuthorizedCoordinator.swift */,
 			);
-			path = Coordinators;
+			path = AppFlow;
+			sourceTree = "<group>";
+		};
+		DFA7D05627E672180021C1BE /* TabBars */ = {
+			isa = PBXGroup;
+			children = (
+				DF67046E27A836E800AA3F8F /* TabBarController.swift */,
+				DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */,
+				DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */,
+				DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */,
+			);
+			path = TabBars;
+			sourceTree = "<group>";
+		};
+		DFA7D05727E672440021C1BE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				DFF496DA27B04C9500EBF4C9 /* ScreensFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		DFC54C0627B25F25007B0EAA /* Models */ = {
@@ -288,7 +306,8 @@
 		DFF496D727B045A500EBF4C9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				DFA7D05227E6617D0021C1BE /* Coordinatable.swift */,
+				DFA7D05227E6617D0021C1BE /* AppCoordinatable.swift */,
+				DFA7D05827E678EC0021C1BE /* ChildCoordinatable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -398,14 +417,15 @@
 				DFC3432427B0F15200F1D160 /* LanguageSelectionPresenter.swift in Sources */,
 				18F5B9EE2732FF9F0071BEBB /* AppDelegate.swift in Sources */,
 				DF67047127A849FE00AA3F8F /* HomeCoordinator.swift in Sources */,
+				DFA7D05927E678EC0021C1BE /* ChildCoordinatable.swift in Sources */,
 				DF985F7B27B33B70003FA460 /* TranslateManagerError.swift in Sources */,
 				DFC3432127B0F0AD00F1D160 /* LanguageSelectionViewController.swift in Sources */,
 				18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */,
 				DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */,
-				DFF496DB27B04C9500EBF4C9 /* AssemblyBuilder.swift in Sources */,
+				DFF496DB27B04C9500EBF4C9 /* ScreensFactory.swift in Sources */,
 				DFC54C1527B2D6A8007B0EAA /* NetworkService.swift in Sources */,
 				DFC54C1927B31F9C007B0EAA /* History.swift in Sources */,
-				DFA7D05327E6617D0021C1BE /* Coordinatable.swift in Sources */,
+				DFA7D05327E6617D0021C1BE /* AppCoordinatable.swift in Sources */,
 				DF67047327A84B0C00AA3F8F /* SavedCoordinator.swift in Sources */,
 				E91A8BB0273FEDE600CE7FBF /* TranslateManager.swift in Sources */,
 				DFC54C0C27B2C166007B0EAA /* HTTPMethod.swift in Sources */,

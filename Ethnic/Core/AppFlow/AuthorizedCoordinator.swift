@@ -8,20 +8,18 @@
 import Foundation
 import UIKit
 
-class AuthorizedCoordinator: Coordinatable {
+class AuthorizedCoordinator: AppCoordinatable {
   private let window: UIWindow?
-  private let tabBarController: UITabBarController?
 
   init(
-    window: UIWindow?,
-    tabBarController: UITabBarController
+    window: UIWindow?
   ) {
     self.window = window
-    self.tabBarController = tabBarController
   }
 
   func start() {
-    self.window?.rootViewController = tabBarController
+    self.window?.rootViewController = ScreensFactory.createTabBarController()
     self.window?.makeKeyAndVisible()
   }
 }
+

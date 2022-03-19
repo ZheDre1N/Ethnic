@@ -1,13 +1,24 @@
 import UIKit
 
-protocol AssemblyBuilderProtocol {
+protocol ScreensFactorable {
+  static func createTabBarController() -> UITabBarController
   static func createHomeModule() -> UIViewController
   static func createLanguageSelectionModule() -> UIViewController
   static func createSavedModule() -> UIViewController
   static func createSettingsModule() -> UIViewController
 }
 
-final class AssemblyBuilder: AssemblyBuilderProtocol {
+final class ScreensFactory: ScreensFactorable {
+  // MARK: - Tabs.
+  static func createTabBarController() -> UITabBarController {
+    let tabBarController = TabBarController(
+      home = HomeCoordinator(),
+      saved = SavedCoordinator(),
+      settings = SettingsCoordinator()
+    )
+    return tabBarController
+  }
+
   // MARK: - Home tabs.
   static func createHomeModule() -> UIViewController {
     let view = HomeViewController()

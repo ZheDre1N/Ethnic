@@ -1,10 +1,10 @@
 import UIKit
 
-protocol SettingsCoordinatorProtocol {
-  var navigationController: UINavigationController { get set }
-}
-
-final class SettingsCoordinator: SettingsCoordinatorProtocol {
+final class SavedCoordinator: ChildCoordinatable {
+  func start() {
+    //
+  }
+  
   var navigationController: UINavigationController
 
   required init() {
@@ -12,7 +12,7 @@ final class SettingsCoordinator: SettingsCoordinatorProtocol {
     navVC.navigationBar.prefersLargeTitles = true
 
     self.navigationController = navVC
-    let view = AssemblyBuilder.createSettingsModule()
+    let view = ScreensFactory.createSavedModule()
     navigationController.viewControllers = [view]
   }
 }

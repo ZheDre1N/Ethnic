@@ -7,9 +7,9 @@
 
 import UIKit
 
-class AppCoordinator: Coordinatable {
+class AppCoordinator: AppCoordinatable {
   private let window: UIWindow?
-  var starterCoordinator: Coordinatable?
+  var starterCoordinator: AppCoordinatable?
 
   init(
     window: UIWindow? = UIWindow()
@@ -20,10 +20,7 @@ class AppCoordinator: Coordinatable {
 
   func setupStarterCoordinator() {
     // The best place to check loggin user or not
-    starterCoordinator = AuthorizedCoordinator(
-      window: window,
-      tabBarController: TabBarController()
-    )
+    starterCoordinator = AuthorizedCoordinator(window: window)
   }
 
   func start() {
