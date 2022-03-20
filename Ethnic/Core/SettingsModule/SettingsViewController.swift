@@ -12,6 +12,7 @@ final class SettingsViewController: UIViewController {
   // MARK: - View controller life cycle.
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.backgroundColor = .systemGroupedBackground
     title = "Настройки"
     tableView.delegate = self
     tableView.dataSource = self
@@ -28,6 +29,13 @@ extension SettingsViewController: UITableViewDataSource {
     return 5
   }
 
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    32
+  }
+
+  func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    32
+  }
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     presenter.dataSource.count
   }

@@ -16,6 +16,7 @@ final class HomeViewController: UIViewController {
   // MARK: - View controller life cycle.
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.backgroundColor = .systemGroupedBackground
     title = "Переводчик"
   }
 

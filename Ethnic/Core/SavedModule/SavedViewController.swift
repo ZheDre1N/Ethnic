@@ -14,6 +14,7 @@ final class SavedViewController: UIViewController {
   // MARK: - View controller life cycle.
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.backgroundColor = .systemGroupedBackground
     title = "Сохраненное"
     tableView.delegate = self
     tableView.dataSource = self
