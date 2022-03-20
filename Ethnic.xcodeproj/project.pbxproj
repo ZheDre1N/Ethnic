@@ -36,6 +36,7 @@
 		DFC54C1527B2D6A8007B0EAA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */; };
 		DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1627B31F3A007B0EAA /* Translation.swift */; };
 		DFC54C1927B31F9C007B0EAA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1827B31F9C007B0EAA /* History.swift */; };
+		DFCE9A2D27E752E20014F323 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE9A2C27E752E20014F323 /* UIColor + Ext.swift */; };
 		DFD51B5427E6362700EDB763 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD51B5327E6362700EDB763 /* AppCoordinator.swift */; };
 		DFDB80DC27CE547B00357B9F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB80DB27CE547B00357B9F /* SettingsCell.swift */; };
 		DFF496D927B0487D00EBF4C9 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */; };
@@ -78,6 +79,7 @@
 		DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DFC54C1627B31F3A007B0EAA /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		DFC54C1827B31F9C007B0EAA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		DFCE9A2C27E752E20014F323 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		DFD51B5327E6362700EDB763 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DFDB80DB27CE547B00357B9F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 				18F5BA05273306B80071BEBB /* Application */,
 				DF67046D27A832DD00AA3F8F /* Managers */,
 				18F5BA07273306D80071BEBB /* Core */,
-				18F5BA06273306C60071BEBB /* Reusable Library */,
+				18F5BA06273306C60071BEBB /* Library */,
 				18F5BA042733069F0071BEBB /* Resources */,
 			);
 			path = Ethnic;
@@ -146,14 +148,15 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		18F5BA06273306C60071BEBB /* Reusable Library */ = {
+		18F5BA06273306C60071BEBB /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DFCE9A2B27E752C30014F323 /* Extensions */,
 				DFC54C1327B2D2ED007B0EAA /* Network */,
 				DFC54C1027B2C749007B0EAA /* Models */,
 				DFF496D727B045A500EBF4C9 /* Protocols */,
 			);
-			path = "Reusable Library";
+			path = Library;
 			sourceTree = "<group>";
 		};
 		18F5BA07273306D80071BEBB /* Core */ = {
@@ -267,6 +270,14 @@
 				DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DFCE9A2B27E752C30014F323 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DFCE9A2C27E752E20014F323 /* UIColor + Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DFDB80D727CE17F200357B9F /* Models */ = {
@@ -414,6 +425,7 @@
 				DFF496D927B0487D00EBF4C9 /* SettingsCoordinator.swift in Sources */,
 				DFF496E227B06B2000EBF4C9 /* HomeViewController.swift in Sources */,
 				DFC3433227B1014600F1D160 /* SettingsPresenter.swift in Sources */,
+				DFCE9A2D27E752E20014F323 /* UIColor + Ext.swift in Sources */,
 				DFC3432427B0F15200F1D160 /* LanguageSelectionPresenter.swift in Sources */,
 				18F5B9EE2732FF9F0071BEBB /* AppDelegate.swift in Sources */,
 				DF67047127A849FE00AA3F8F /* HomeCoordinator.swift in Sources */,
