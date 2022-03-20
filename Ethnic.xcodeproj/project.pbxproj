@@ -37,6 +37,10 @@
 		DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1627B31F3A007B0EAA /* Translation.swift */; };
 		DFC54C1927B31F9C007B0EAA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1827B31F9C007B0EAA /* History.swift */; };
 		DFCE9A2D27E752E20014F323 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE9A2C27E752E20014F323 /* UIColor + Ext.swift */; };
+		DFCE9A3027E756BA0014F323 /* SavedTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE9A2F27E756BA0014F323 /* SavedTableViewDelegate.swift */; };
+		DFCE9A3227E756CE0014F323 /* SavedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE9A3127E756CE0014F323 /* SavedTableViewDataSource.swift */; };
+		DFCE9A3927E7609F0014F323 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE9A3727E7609F0014F323 /* SavedTableViewCell.swift */; };
+		DFCE9A3A27E7609F0014F323 /* SavedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCE9A3827E7609F0014F323 /* SavedTableViewCell.xib */; };
 		DFD51B5427E6362700EDB763 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD51B5327E6362700EDB763 /* AppCoordinator.swift */; };
 		DFDB80DC27CE547B00357B9F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB80DB27CE547B00357B9F /* SettingsCell.swift */; };
 		DFF496D927B0487D00EBF4C9 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */; };
@@ -80,6 +84,10 @@
 		DFC54C1627B31F3A007B0EAA /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		DFC54C1827B31F9C007B0EAA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DFCE9A2C27E752E20014F323 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		DFCE9A2F27E756BA0014F323 /* SavedTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewDelegate.swift; sourceTree = "<group>"; };
+		DFCE9A3127E756CE0014F323 /* SavedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewDataSource.swift; sourceTree = "<group>"; };
+		DFCE9A3727E7609F0014F323 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
+		DFCE9A3827E7609F0014F323 /* SavedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedTableViewCell.xib; sourceTree = "<group>"; };
 		DFD51B5327E6362700EDB763 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DFDB80DB27CE547B00357B9F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		DFF496D827B0487D00EBF4C9 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		18F5BA2D2733163D0071BEBB /* SavedModule */ = {
 			isa = PBXGroup;
 			children = (
+				DFCE9A2E27E756960014F323 /* SavedTableView */,
 				DFC3432B27B0FEBF00F1D160 /* SavedPresenter.swift */,
 				DFC3432727B0FEB300F1D160 /* SavedViewController.swift */,
 				DFC3432827B0FEB300F1D160 /* SavedViewController.xib */,
@@ -278,6 +287,25 @@
 				DFCE9A2C27E752E20014F323 /* UIColor + Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DFCE9A2E27E756960014F323 /* SavedTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DFCE9A3327E7581A0014F323 /* SavedCell */,
+				DFCE9A2F27E756BA0014F323 /* SavedTableViewDelegate.swift */,
+				DFCE9A3127E756CE0014F323 /* SavedTableViewDataSource.swift */,
+			);
+			path = SavedTableView;
+			sourceTree = "<group>";
+		};
+		DFCE9A3327E7581A0014F323 /* SavedCell */ = {
+			isa = PBXGroup;
+			children = (
+				DFCE9A3727E7609F0014F323 /* SavedTableViewCell.swift */,
+				DFCE9A3827E7609F0014F323 /* SavedTableViewCell.xib */,
+			);
+			path = SavedCell;
 			sourceTree = "<group>";
 		};
 		DFDB80D727CE17F200357B9F /* Models */ = {
@@ -388,6 +416,7 @@
 				DFC3432227B0F0AD00F1D160 /* LanguageSelectionViewController.xib in Resources */,
 				18F5B9F72732FFA00071BEBB /* Assets.xcassets in Resources */,
 				DFF496E327B06B2000EBF4C9 /* HomeViewController.xib in Resources */,
+				DFCE9A3A27E7609F0014F323 /* SavedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +455,7 @@
 				DFF496E227B06B2000EBF4C9 /* HomeViewController.swift in Sources */,
 				DFC3433227B1014600F1D160 /* SettingsPresenter.swift in Sources */,
 				DFCE9A2D27E752E20014F323 /* UIColor + Ext.swift in Sources */,
+				DFCE9A3227E756CE0014F323 /* SavedTableViewDataSource.swift in Sources */,
 				DFC3432427B0F15200F1D160 /* LanguageSelectionPresenter.swift in Sources */,
 				18F5B9EE2732FF9F0071BEBB /* AppDelegate.swift in Sources */,
 				DF67047127A849FE00AA3F8F /* HomeCoordinator.swift in Sources */,
@@ -445,6 +475,8 @@
 				DFD51B5427E6362700EDB763 /* AppCoordinator.swift in Sources */,
 				DFDB80DC27CE547B00357B9F /* SettingsCell.swift in Sources */,
 				DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */,
+				DFCE9A3927E7609F0014F323 /* SavedTableViewCell.swift in Sources */,
+				DFCE9A3027E756BA0014F323 /* SavedTableViewDelegate.swift in Sources */,
 				DFC3432927B0FEB300F1D160 /* SavedViewController.swift in Sources */,
 				DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */,
 				DF05B6E427CA02620018D184 /* NetworkManager.swift in Sources */,

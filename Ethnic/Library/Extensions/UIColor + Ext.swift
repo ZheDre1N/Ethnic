@@ -8,6 +8,6 @@
 import UIKit
 
 extension UIColor {
-  static let ethnicMainBlackColor = UIColor.black
-  static let ethnicSecondaryBlueColor = UIColor.systemBlue
+  static let ethnicBlack = UIColor.black
+  static let ethnicBlue = UIColor(named: "ethnicBlue")
 }
