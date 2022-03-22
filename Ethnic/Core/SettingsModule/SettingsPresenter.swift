@@ -6,12 +6,12 @@ protocol SettingsViewProtocol: AnyObject {
 protocol SettingsViewPresenterProtocol: AnyObject {
   init(view: SettingsViewProtocol)
 
-  var dataSource: [LanguageProtocol] { get }
+  var tableDataSource: [Section] { get }
 }
 
 final class SettingsPresenter: SettingsViewPresenterProtocol {
   weak var view: SettingsViewProtocol?
-  var dataSource = StorageManager().getListOfLanguages() + StorageManager().getListOfLanguages()
+  var tableDataSource = SettingsTableViewModel().dataSource
 
   required init(view: SettingsViewProtocol) {
     self.view = view

@@ -7,10 +7,10 @@
 
 import UIKit
 
-struct SettingsTableViewDataSource {
-  var tableDataSource: [Section] = [
+struct SettingsTableViewModel {
+  var dataSource: [Section] = [
     Section(title: "Account", cells: [
-      .staticCell(model: StaticCell(
+      .profileCell(model: ProfileCell(
   title: "Eugene Dudkin",
   icon: UIImage(systemName: "person.circle"),
   iconBackgroundColor: .systemPink,
