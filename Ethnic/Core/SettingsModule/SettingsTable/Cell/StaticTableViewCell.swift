@@ -33,6 +33,9 @@ class StaticTableViewCell: UITableViewCell {
   private let label: UILabel = {
     let label = UILabel()
     label.numberOfLines = 1
+    label.adjustsFontForContentSizeCategory = true
+    label.lineBreakMode = .byWordWrapping
+    label.font = UIFont.preferredFont(forTextStyle: .body)
     return label
   }()
 

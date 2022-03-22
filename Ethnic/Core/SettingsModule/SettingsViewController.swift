@@ -19,6 +19,7 @@ final class SettingsViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(ProfileTableViewCell.self, forCellReuseIdentifier: ProfileTableViewCell.description())
+    tableView.register(DefaultTableViewCell.self, forCellReuseIdentifier: DefaultTableViewCell.description())
     tableView.register(StaticTableViewCell.self, forCellReuseIdentifier: StaticTableViewCell.description())
     tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.description())
   }
@@ -54,6 +55,14 @@ extension SettingsViewController: UITableViewDataSource {
       cell.configure(with: model)
       return cell
 
+    case .defaultCell(let model):
+      let cell = tableView.dequeueReusableCell(
+        withIdentifier: DefaultTableViewCell.description(),
+        for: indexPath
+      ) as! DefaultTableViewCell
+      cell.configure(with: model)
+      return cell
+      
     case .staticCell(let model):
       let cell = tableView.dequeueReusableCell(
         withIdentifier: StaticTableViewCell.description(),
@@ -78,6 +87,10 @@ extension SettingsViewController: UITableViewDelegate {
     UITableView.automaticDimension
   }
 
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    UITableView.automaticDimension
+  }
+
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
 
@@ -85,6 +98,10 @@ extension SettingsViewController: UITableViewDelegate {
 
     switch type.self {
     case .profileCell(let model):
+      if let handler = model.handler {
+        handler()
+      }
+    case .defaultCell(let model):
       if let handler = model.handler {
         handler()
       }

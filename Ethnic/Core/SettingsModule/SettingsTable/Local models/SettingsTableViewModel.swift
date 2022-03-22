@@ -15,12 +15,10 @@ struct SettingsTableViewModel {
         icon: UIImage(systemName: "person.circle"),
         iconBackgroundColor: .systemPink,
         handler: nil
-  )),
-      .staticCell(model: StaticCell(
-          title: "Update settings",
-          icon: UIImage(systemName: "character"),
-          iconBackgroundColor: .ethnicBlue,
-          handler: nil
+      )),
+      .defaultCell(model: DefaultCell(
+        title: "Notifications",
+        handler: nil
         ))
     ]),
 
@@ -89,10 +87,8 @@ struct SettingsTableViewModel {
     ]),
 
     Section(title: nil, cells: [
-      .staticCell(model: StaticCell(
+      .defaultCell(model: DefaultCell(
         title: "Clear Translation History",
-        icon: UIImage(systemName: "trash"),
-        iconBackgroundColor: .systemRed,
         handler: nil
       ))
     ])

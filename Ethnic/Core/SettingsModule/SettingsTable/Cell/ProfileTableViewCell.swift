@@ -33,13 +33,21 @@ class ProfileTableViewCell: UITableViewCell {
   private let firstLabel: UILabel = {
     let label = UILabel()
     label.numberOfLines = 1
+    label.adjustsFontForContentSizeCategory = true
+    label.lineBreakMode = .byWordWrapping
+    label.font = UIFont.preferredFont(forTextStyle: .body)
+    label.sizeToFit()
     return label
   }()
 
   private let secondaryLabel: UILabel = {
     let label = UILabel()
     label.numberOfLines = 1
+    label.adjustsFontForContentSizeCategory = true
+    label.lineBreakMode = .byWordWrapping
+    label.font = UIFont.preferredFont(forTextStyle: .body)
     label.textColor = .secondaryLabel
+    label.sizeToFit()
     return label
   }()
 

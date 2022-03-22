@@ -34,6 +34,9 @@ class SwitchTableViewCell: UITableViewCell {
   private let label: UILabel = {
     let label = UILabel()
     label.numberOfLines = 1
+    label.adjustsFontForContentSizeCategory = true
+    label.lineBreakMode = .byWordWrapping
+    label.font = UIFont.preferredFont(forTextStyle: .body)
     return label
   }()
 
@@ -66,7 +69,7 @@ class SwitchTableViewCell: UITableViewCell {
     label.frame = CGRect(
       x: 25 + iconContainer.frame.size.width,
       y: 0,
-      width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
+      width: contentView.frame.size.width - 20 - iconContainer.frame.size.width - mySwitch.frame.size.width,
       height: contentView.frame.size.height
     )
   }

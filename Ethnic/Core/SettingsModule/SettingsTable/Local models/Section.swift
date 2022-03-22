@@ -14,6 +14,7 @@ struct Section {
 
 enum CustomCellType {
   case profileCell(model: ProfileCell)
+  case defaultCell(model: DefaultCell)
   case staticCell(model: StaticCell)
   case switchCell(model: SwitchCell)
 }
