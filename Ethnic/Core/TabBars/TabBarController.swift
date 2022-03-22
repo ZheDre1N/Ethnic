@@ -38,8 +38,8 @@ final class TabBarController: UITabBarController {
   private func configureTabBars() {
     home.navigationController.tabBarItem = UITabBarItem(
       title: "Переводчик",
-      image: UIImage(systemName: "house"),
-      selectedImage: UIImage(systemName: "house.fill")
+      image: UIImage(systemName: "character.bubble"),
+      selectedImage: UIImage(systemName: "character.bubble.fill")
     )
 
     saved.navigationController.tabBarItem = UITabBarItem(

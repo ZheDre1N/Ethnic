@@ -21,23 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-4J-zTW">
-                    <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-7b-Yzf" userLabel="Soure Text View">
+                    <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                    <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-is-5Jx">
+                    <rect key="frame" x="16" y="52" width="382" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HF0-tN-yIF">
-                            <rect key="frame" x="173.5" y="0.0" width="67" height="48"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="67" id="UhB-QJ-cK6"/>
-                            </constraints>
-                            <color key="tintColor" name="ethnicBlue"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="arrow.left.arrow.right.square" catalog="system"/>
-                            <connections>
-                                <action selector="swapLanguageButtonTapped:" destination="-1" eventType="touchUpInside" id="h2J-NE-4CQ"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L32-nQ-FJY">
-                            <rect key="frame" x="240.5" y="0.0" width="173.5" height="48"/>
+                            <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                            <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                             <color key="tintColor" name="ethnicBlue"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Эрзянский"/>
@@ -45,8 +42,9 @@
                                 <action selector="targetLanguageButtonTapped:" destination="-1" eventType="touchUpInside" id="mub-W1-xPG"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7e-4h-NJ1">
-                            <rect key="frame" x="-1" y="0.0" width="173.5" height="48"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7e-4h-NJ1">
+                            <rect key="frame" x="199" y="0.0" width="183" height="40"/>
+                            <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Русский">
                                 <color key="baseForegroundColor" name="ethnicBlue"/>
@@ -56,75 +54,26 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="L32-nQ-FJY" firstAttribute="top" secondItem="hCI-4J-zTW" secondAttribute="top" id="9sv-Ug-MR7"/>
-                        <constraint firstItem="HF0-tN-yIF" firstAttribute="centerX" secondItem="hCI-4J-zTW" secondAttribute="centerX" id="OeV-y3-W3Q"/>
-                        <constraint firstAttribute="bottom" secondItem="L7e-4h-NJ1" secondAttribute="bottom" id="T5E-Qu-4Kb"/>
-                        <constraint firstAttribute="height" constant="48" id="Xz0-o6-fi2"/>
-                        <constraint firstAttribute="trailing" secondItem="L32-nQ-FJY" secondAttribute="trailing" id="acj-Tc-CuD"/>
-                        <constraint firstItem="HF0-tN-yIF" firstAttribute="top" secondItem="hCI-4J-zTW" secondAttribute="top" id="crb-VD-R5j"/>
-                        <constraint firstItem="L7e-4h-NJ1" firstAttribute="top" secondItem="hCI-4J-zTW" secondAttribute="top" id="e5x-i1-H98"/>
-                        <constraint firstAttribute="bottom" secondItem="HF0-tN-yIF" secondAttribute="bottom" id="e9z-RD-tFq"/>
-                        <constraint firstItem="L7e-4h-NJ1" firstAttribute="leading" secondItem="hCI-4J-zTW" secondAttribute="leading" id="muo-CZ-9aq"/>
-                        <constraint firstAttribute="bottom" secondItem="L32-nQ-FJY" secondAttribute="bottom" id="rbc-oE-nH1"/>
-                        <constraint firstItem="HF0-tN-yIF" firstAttribute="leading" secondItem="L7e-4h-NJ1" secondAttribute="trailing" id="tgG-MV-tAS"/>
-                        <constraint firstItem="L32-nQ-FJY" firstAttribute="leading" secondItem="HF0-tN-yIF" secondAttribute="trailing" id="vwv-BK-Fay"/>
+                        <constraint firstAttribute="height" constant="40" id="XWf-xH-qOg"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiN-X0-jFF" userLabel="border 1">
-                    <rect key="frame" x="0.0" y="92" width="414" height="1"/>
-                    <color key="backgroundColor" systemColor="separatorColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="blF-eU-0nn"/>
-                    </constraints>
-                </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-7b-Yzf" userLabel="Soure Text View">
-                    <rect key="frame" x="0.0" y="93" width="414" height="250"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="250" id="qpq-i0-QUA"/>
-                    </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl2-x8-BQh">
-                    <rect key="frame" x="40" y="351" width="334" height="40"/>
-                    <color key="backgroundColor" systemColor="systemFillColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="PCt-6u-t7z"/>
-                    </constraints>
-                    <color key="tintColor" name="ethnicBlue"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Translate"/>
-                    <connections>
-                        <action selector="translateButtonTapped:" destination="-1" eventType="touchUpInside" id="YpV-R5-4Gu"/>
-                    </connections>
-                </button>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="f0h-7b-Yzf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B7N-xw-FYG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iiN-X0-jFF" secondAttribute="trailing" id="O0P-A2-JAR"/>
-                <constraint firstItem="f0h-7b-Yzf" firstAttribute="top" secondItem="iiN-X0-jFF" secondAttribute="bottom" id="RDa-8b-imD"/>
-                <constraint firstItem="hCI-4J-zTW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RGZ-cu-EoZ"/>
-                <constraint firstItem="iiN-X0-jFF" firstAttribute="top" secondItem="hCI-4J-zTW" secondAttribute="bottom" id="a1H-Dk-nFJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hCI-4J-zTW" secondAttribute="trailing" id="a3J-xt-B0g"/>
-                <constraint firstItem="Gl2-x8-BQh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="cIG-SU-bAU"/>
-                <constraint firstItem="hCI-4J-zTW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cMm-nR-E3Z"/>
-                <constraint firstItem="iiN-X0-jFF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dwN-b5-hRZ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gl2-x8-BQh" secondAttribute="trailing" constant="40" id="j25-On-U21"/>
-                <constraint firstItem="Gl2-x8-BQh" firstAttribute="top" secondItem="f0h-7b-Yzf" secondAttribute="bottom" constant="8" id="kFN-OK-gjh"/>
-                <constraint firstItem="f0h-7b-Yzf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xvN-mt-vzj"/>
+                <constraint firstAttribute="trailing" secondItem="f0h-7b-Yzf" secondAttribute="trailing" id="74Y-hW-urZ"/>
+                <constraint firstItem="q8d-is-5Jx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="7wN-cc-vXp"/>
+                <constraint firstItem="q8d-is-5Jx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JrF-fU-wcE"/>
+                <constraint firstItem="f0h-7b-Yzf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bdV-kk-50E"/>
+                <constraint firstItem="f0h-7b-Yzf" firstAttribute="top" secondItem="q8d-is-5Jx" secondAttribute="bottom" constant="8" id="dm2-Rp-rsy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="q8d-is-5Jx" secondAttribute="trailing" constant="16" id="oNo-wQ-1iC"/>
+                <constraint firstAttribute="bottom" secondItem="f0h-7b-Yzf" secondAttribute="bottom" id="tSq-V3-0Rw"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow.left.arrow.right.square" catalog="system" width="128" height="114"/>
         <namedColor name="ethnicBlue">
             <color red="0.19215686274509805" green="0.68627450980392157" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -134,14 +83,8 @@
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

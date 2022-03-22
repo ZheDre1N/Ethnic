@@ -28,22 +28,28 @@ extension SavedViewController: SavedViewProtocol {
 
 extension SavedViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    presenter.dataSource.count
+    1
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "SavedTableViewCell", for: indexPath) as! SavedTableViewCell
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: "SavedTableViewCell",
+      for: indexPath
+    ) as? SavedTableViewCell else {
+      return UITableViewCell()
+    }
+
     let cellModel = presenter.dataSource[indexPath.row]
     cell.configureCellData(with: cellModel)
     return cell
   }
 
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    "Русский-Эрзянский"
+    ""
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {
-    2
+    5
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

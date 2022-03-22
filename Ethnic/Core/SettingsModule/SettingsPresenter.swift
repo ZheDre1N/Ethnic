@@ -11,7 +11,7 @@ protocol SettingsViewPresenterProtocol: AnyObject {
 
 final class SettingsPresenter: SettingsViewPresenterProtocol {
   weak var view: SettingsViewProtocol?
-  var dataSource = StorageManager().getListOfLanguages()
+  var dataSource = StorageManager().getListOfLanguages() + StorageManager().getListOfLanguages()
 
   required init(view: SettingsViewProtocol) {
     self.view = view
