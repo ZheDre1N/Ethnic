@@ -11,11 +11,17 @@ struct SettingsTableViewModel {
   var dataSource: [Section] = [
     Section(title: "Account", cells: [
       .profileCell(model: ProfileCell(
-  title: "Eugene Dudkin",
-  icon: UIImage(systemName: "person.circle"),
-  iconBackgroundColor: .systemPink,
-  handler: nil
-  ))
+        title: "Eugene Dudkin",
+        icon: UIImage(systemName: "person.circle"),
+        iconBackgroundColor: .systemPink,
+        handler: nil
+  )),
+      .staticCell(model: StaticCell(
+          title: "Update settings",
+          icon: UIImage(systemName: "character"),
+          iconBackgroundColor: .ethnicBlue,
+          handler: nil
+        ))
     ]),
 
     Section(title: "Translation", cells: [

@@ -30,11 +30,22 @@ class ProfileTableViewCell: UITableViewCell {
     return imageView
   }()
 
-  private let label: UILabel = {
+  private let firstLabel: UILabel = {
     let label = UILabel()
     label.numberOfLines = 1
     return label
   }()
+
+  private let secondaryLabel: UILabel = {
+    let label = UILabel()
+    label.numberOfLines = 1
+    label.textColor = .secondaryLabel
+    return label
+  }()
+
+  override func sizeThatFits(_ size: CGSize) -> CGSize {
+    return CGSize(width: contentView.frame.size.width, height: 64)
+  }
 
   override func layoutSubviews() {
     super.layoutSubviews()
@@ -49,9 +60,16 @@ class ProfileTableViewCell: UITableViewCell {
       height: imageSize
     )
 
-    label.frame = CGRect(
+    firstLabel.frame = CGRect(
       x: 25 + iconContainer.frame.size.width,
-      y: 0,
+      y: -15,
+      width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
+      height: contentView.frame.size.height
+    )
+
+    secondaryLabel.frame = CGRect(
+      x: 25 + iconContainer.frame.size.width,
+      y: 15,
       width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
       height: contentView.frame.size.height
     )
@@ -59,7 +77,8 @@ class ProfileTableViewCell: UITableViewCell {
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    contentView.addSubview(label)
+    contentView.addSubview(firstLabel)
+    contentView.addSubview(secondaryLabel)
     contentView.addSubview(iconContainer)
     iconContainer.addSubview(iconImageView)
     contentView.clipsToBounds = true
@@ -73,12 +92,14 @@ class ProfileTableViewCell: UITableViewCell {
   override func prepareForReuse() {
     super.prepareForReuse()
     iconImageView.image = nil
-    label.text = nil
+    firstLabel.text = nil
+    secondaryLabel.text = nil
     iconContainer.backgroundColor = nil
   }
 
   public func configure(with model: ProfileCell) {
-    label.text = model.title
+    firstLabel.text = model.title
+    secondaryLabel.text = "Personal & Purchases"
     iconImageView.image = model.icon
     iconContainer.backgroundColor = model.iconBackgroundColor
   }
