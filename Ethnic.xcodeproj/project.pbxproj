@@ -11,7 +11,6 @@
 		18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5B9EF2732FF9F0071BEBB /* SceneDelegate.swift */; };
 		18F5B9F72732FFA00071BEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F62732FFA00071BEBB /* Assets.xcassets */; };
 		18F5B9FA2732FFA00071BEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F82732FFA00071BEBB /* LaunchScreen.storyboard */; };
-		DF05B6E427CA02620018D184 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF05B6E327CA02620018D184 /* NetworkManager.swift */; };
 		DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67046E27A836E800AA3F8F /* TabBarController.swift */; };
 		DF67047127A849FE00AA3F8F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */; };
 		DF67047327A84B0C00AA3F8F /* SavedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */; };
@@ -32,7 +31,6 @@
 		DFC3433227B1014600F1D160 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3433127B1014600F1D160 /* SettingsPresenter.swift */; };
 		DFC54C0A27B2B18B007B0EAA /* APIDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C0927B2B18B007B0EAA /* APIDataModel.swift */; };
 		DFC54C0C27B2C166007B0EAA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C0B27B2C166007B0EAA /* HTTPMethod.swift */; };
-		DFC54C1527B2D6A8007B0EAA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */; };
 		DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1627B31F3A007B0EAA /* Translation.swift */; };
 		DFC54C1927B31F9C007B0EAA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC54C1827B31F9C007B0EAA /* History.swift */; };
 		DFC610E727E9BAFC00E4F753 /* StaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC610E627E9BAFC00E4F753 /* StaticTableViewCell.swift */; };
@@ -62,7 +60,6 @@
 		18F5B9F62732FFA00071BEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F5B9F92732FFA00071BEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F5B9FB2732FFA00071BEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF05B6E327CA02620018D184 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DF67046E27A836E800AA3F8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCoordinator.swift; sourceTree = "<group>"; };
@@ -83,7 +80,6 @@
 		DFC3433127B1014600F1D160 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		DFC54C0927B2B18B007B0EAA /* APIDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataModel.swift; sourceTree = "<group>"; };
 		DFC54C0B27B2C166007B0EAA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DFC54C1627B31F3A007B0EAA /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		DFC54C1827B31F9C007B0EAA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		DFC610E627E9BAFC00E4F753 /* StaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,7 +165,6 @@
 			children = (
 				DFCE9A3B27E784580014F323 /* Custom elements */,
 				DFCE9A2B27E752C30014F323 /* Extensions */,
-				DFC54C1327B2D2ED007B0EAA /* Network */,
 				DFC54C1027B2C749007B0EAA /* Models */,
 				DFF496D727B045A500EBF4C9 /* Protocols */,
 			);
@@ -226,7 +221,7 @@
 		DF67046D27A832DD00AA3F8F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				DF05B6E327CA02620018D184 /* NetworkManager.swift */,
+				DFC54C1327B2D2ED007B0EAA /* Network */,
 				E91A8BAF273FEDE600CE7FBF /* TranslateManager.swift */,
 				DF985F7827B339E9003FA460 /* StorageManager.swift */,
 			);
@@ -284,7 +279,6 @@
 		DFC54C1327B2D2ED007B0EAA /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DFC54C1427B2D6A8007B0EAA /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -514,7 +508,6 @@
 				18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */,
 				DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */,
 				DFF496DB27B04C9500EBF4C9 /* ScreensFactory.swift in Sources */,
-				DFC54C1527B2D6A8007B0EAA /* NetworkService.swift in Sources */,
 				DFC54C1927B31F9C007B0EAA /* History.swift in Sources */,
 				DFA7D05327E6617D0021C1BE /* AppCoordinatable.swift in Sources */,
 				DF67047327A84B0C00AA3F8F /* SavedCoordinator.swift in Sources */,
@@ -527,7 +520,6 @@
 				DFCE9A3027E756BA0014F323 /* SavedTableViewDelegate.swift in Sources */,
 				DFC3432927B0FEB300F1D160 /* SavedViewController.swift in Sources */,
 				DFF496DF27B0643900EBF4C9 /* HomePresenter.swift in Sources */,
-				DF05B6E427CA02620018D184 /* NetworkManager.swift in Sources */,
 				DF985F7727B337AC003FA460 /* Language.swift in Sources */,
 				DF985F7927B339E9003FA460 /* StorageManager.swift in Sources */,
 			);

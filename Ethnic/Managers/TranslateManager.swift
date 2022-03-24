@@ -34,16 +34,17 @@ class TranslateManager: TranslateManagerProtocol {
       return
     }
 
-    // 2. Create a request
+    // 3. Create a request
     let request = makeTranslateRequest(data: httpBody, url: url)
 
-    // 3. Create a URLSessionDataTask
-    NetworkService().createDataTask(request: request) { data, _, _ in
+    // 4. Create a URLSessionDataTask
+    createDataTask(request: request) { data, _, _ in
       guard let data = data else {
         completionHandler(.failure(TranslateManagerError.createDataTask))
         return
       }
 
+      // 5. Decode data
       guard let targetText = self.decodeTranslateResponse(data: data) else {
         completionHandler(.failure(TranslateManagerError.decodeData))
         return
@@ -80,6 +81,15 @@ class TranslateManager: TranslateManagerProtocol {
     guard let decodedData = try? JSONDecoder().decode(APIDataModel.self, from: data) else { return nil }
     let targetText = decodedData.data
     return targetText
+  }
+
+  private func createDataTask(
+    request: URLRequest,
+    completion: @escaping (Data?, URLResponse?, Error?) -> Void
+  ) {
+    let urlSession = URLSession.shared
+    let task = urlSession.dataTask(with: request, completionHandler: completion)
+    task.resume()
   }
 
   private func addToHistory(translate: TranslationProtocol) {
