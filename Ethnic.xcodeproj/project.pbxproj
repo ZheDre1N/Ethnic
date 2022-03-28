@@ -12,6 +12,7 @@
 		18F5B9F72732FFA00071BEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F62732FFA00071BEBB /* Assets.xcassets */; };
 		18F5B9FA2732FFA00071BEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F82732FFA00071BEBB /* LaunchScreen.storyboard */; };
 		DF0FAFB627EC7381006258FC /* UIViewController + Ext..swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FAFB527EC7381006258FC /* UIViewController + Ext..swift */; };
+		DF617BBD27F2226F0001BBDF /* Ethnic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF617BBB27F2226F0001BBDF /* Ethnic.xcdatamodeld */; };
 		DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67046E27A836E800AA3F8F /* TabBarController.swift */; };
 		DF67047127A849FE00AA3F8F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */; };
 		DF67047327A84B0C00AA3F8F /* SavedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */; };
@@ -62,6 +63,7 @@
 		18F5B9F92732FFA00071BEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F5B9FB2732FFA00071BEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0FAFB527EC7381006258FC /* UIViewController + Ext..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext..swift"; sourceTree = "<group>"; };
+		DF617BBC27F2226F0001BBDF /* Ethnic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ethnic.xcdatamodel; sourceTree = "<group>"; };
 		DF67046E27A836E800AA3F8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCoordinator.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				DF67046D27A832DD00AA3F8F /* Managers */,
 				18F5BA07273306D80071BEBB /* Core */,
 				18F5BA06273306C60071BEBB /* Library */,
+				DF617B9727F21E070001BBDF /* Storage */,
 				18F5BA042733069F0071BEBB /* Resources */,
 			);
 			path = Ethnic;
@@ -218,6 +221,14 @@
 				DFC3432E27B1013300F1D160 /* SettingsViewController.xib */,
 			);
 			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		DF617B9727F21E070001BBDF /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				DF617BBB27F2226F0001BBDF /* Ethnic.xcdatamodeld */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		DF67046D27A832DD00AA3F8F /* Managers */ = {
@@ -502,6 +513,7 @@
 				DFC3432127B0F0AD00F1D160 /* LanguageSelectionViewController.swift in Sources */,
 				DFC610F227EA376100E4F753 /* DefaultTableViewCell.swift in Sources */,
 				18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */,
+				DF617BBD27F2226F0001BBDF /* Ethnic.xcdatamodeld in Sources */,
 				DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */,
 				DFF496DB27B04C9500EBF4C9 /* ScreensFactory.swift in Sources */,
 				DFC54C1927B31F9C007B0EAA /* History.swift in Sources */,
@@ -733,6 +745,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF617BBB27F2226F0001BBDF /* Ethnic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF617BBC27F2226F0001BBDF /* Ethnic.xcdatamodel */,
+			);
+			currentVersion = DF617BBC27F2226F0001BBDF /* Ethnic.xcdatamodel */;
+			path = Ethnic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18F5B9E22732FF9F0071BEBB /* Project object */;
 }
