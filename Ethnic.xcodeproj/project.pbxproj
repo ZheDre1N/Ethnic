@@ -13,6 +13,11 @@
 		18F5B9FA2732FFA00071BEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F5B9F82732FFA00071BEBB /* LaunchScreen.storyboard */; };
 		DF0FAFB627EC7381006258FC /* UIViewController + Ext..swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FAFB527EC7381006258FC /* UIViewController + Ext..swift */; };
 		DF617BBD27F2226F0001BBDF /* Ethnic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF617BBB27F2226F0001BBDF /* Ethnic.xcdatamodeld */; };
+		DF617BC627F230760001BBDF /* Company+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617BC227F230760001BBDF /* Company+CoreDataClass.swift */; };
+		DF617BC727F230760001BBDF /* Company+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617BC327F230760001BBDF /* Company+CoreDataProperties.swift */; };
+		DF617BC927F234910001BBDF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617BC827F234910001BBDF /* CoreDataManager.swift */; };
+		DF617BCF27F2E94E0001BBDF /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617BCD27F2E94E0001BBDF /* User+CoreDataClass.swift */; };
+		DF617BD027F2E94E0001BBDF /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617BCE27F2E94E0001BBDF /* User+CoreDataProperties.swift */; };
 		DF67046F27A836E800AA3F8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67046E27A836E800AA3F8F /* TabBarController.swift */; };
 		DF67047127A849FE00AA3F8F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */; };
 		DF67047327A84B0C00AA3F8F /* SavedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */; };
@@ -64,6 +69,11 @@
 		18F5B9FB2732FFA00071BEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0FAFB527EC7381006258FC /* UIViewController + Ext..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext..swift"; sourceTree = "<group>"; };
 		DF617BBC27F2226F0001BBDF /* Ethnic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ethnic.xcdatamodel; sourceTree = "<group>"; };
+		DF617BC227F230760001BBDF /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DF617BC327F230760001BBDF /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DF617BC827F234910001BBDF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DF617BCD27F2E94E0001BBDF /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DF617BCE27F2E94E0001BBDF /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DF67046E27A836E800AA3F8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DF67047027A849FE00AA3F8F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		DF67047227A84B0C00AA3F8F /* SavedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCoordinator.swift; sourceTree = "<group>"; };
@@ -226,9 +236,22 @@
 		DF617B9727F21E070001BBDF /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				DF617BC827F234910001BBDF /* CoreDataManager.swift */,
+				DF617BCA27F236230001BBDF /* Entities */,
 				DF617BBB27F2226F0001BBDF /* Ethnic.xcdatamodeld */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		DF617BCA27F236230001BBDF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DF617BCD27F2E94E0001BBDF /* User+CoreDataClass.swift */,
+				DF617BCE27F2E94E0001BBDF /* User+CoreDataProperties.swift */,
+				DF617BC227F230760001BBDF /* Company+CoreDataClass.swift */,
+				DF617BC327F230760001BBDF /* Company+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		DF67046D27A832DD00AA3F8F /* Managers */ = {
@@ -500,6 +523,7 @@
 				DFF496E227B06B2000EBF4C9 /* HomeViewController.swift in Sources */,
 				DFC610F027E9CB4200E4F753 /* ProfileTableViewCell.swift in Sources */,
 				DFC3433227B1014600F1D160 /* SettingsPresenter.swift in Sources */,
+				DF617BC927F234910001BBDF /* CoreDataManager.swift in Sources */,
 				DFCE9A2D27E752E20014F323 /* UIColor + Ext.swift in Sources */,
 				DFC610EC27E9BC0C00E4F753 /* Section.swift in Sources */,
 				DF0FAFB627EC7381006258FC /* UIViewController + Ext..swift in Sources */,
@@ -508,11 +532,15 @@
 				18F5B9EE2732FF9F0071BEBB /* AppDelegate.swift in Sources */,
 				DFC610EE27E9BC2D00E4F753 /* SettingsTableViewModel.swift in Sources */,
 				DF67047127A849FE00AA3F8F /* HomeCoordinator.swift in Sources */,
+				DF617BD027F2E94E0001BBDF /* User+CoreDataProperties.swift in Sources */,
+				DF617BC627F230760001BBDF /* Company+CoreDataClass.swift in Sources */,
 				DFA7D05927E678EC0021C1BE /* ChildCoordinatable.swift in Sources */,
 				DF985F7B27B33B70003FA460 /* TranslateManagerError.swift in Sources */,
+				DF617BC727F230760001BBDF /* Company+CoreDataProperties.swift in Sources */,
 				DFC3432127B0F0AD00F1D160 /* LanguageSelectionViewController.swift in Sources */,
 				DFC610F227EA376100E4F753 /* DefaultTableViewCell.swift in Sources */,
 				18F5B9F02732FF9F0071BEBB /* SceneDelegate.swift in Sources */,
+				DF617BCF27F2E94E0001BBDF /* User+CoreDataClass.swift in Sources */,
 				DF617BBD27F2226F0001BBDF /* Ethnic.xcdatamodeld in Sources */,
 				DFC54C1727B31F3A007B0EAA /* Translation.swift in Sources */,
 				DFF496DB27B04C9500EBF4C9 /* ScreensFactory.swift in Sources */,

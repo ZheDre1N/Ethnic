@@ -62,7 +62,7 @@ extension SettingsViewController: UITableViewDataSource {
       ) as! DefaultTableViewCell
       cell.configure(with: model)
       return cell
-      
+
     case .staticCell(let model):
       let cell = tableView.dequeueReusableCell(
         withIdentifier: StaticTableViewCell.description(),

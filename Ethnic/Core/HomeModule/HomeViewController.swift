@@ -24,6 +24,11 @@ final class HomeViewController: UIViewController {
   @IBAction func sourceLanguageButtonTapped(_ sender: UIButton) {
     presenter.goToLanguageSelectionScreen(from: self)
     print("source")
+    let user = CoreDataManager().getMainUser()
+    print(user.name)
+    CoreDataManager().updateUser(with: "123")
+    print(user.name)
+
   }
 
   @IBAction func swapLanguageButtonTapped(_ sender: UIButton) {
