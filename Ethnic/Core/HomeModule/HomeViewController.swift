@@ -24,11 +24,9 @@ final class HomeViewController: UIViewController {
   @IBAction func sourceLanguageButtonTapped(_ sender: UIButton) {
     presenter.goToLanguageSelectionScreen(from: self)
     print("source")
-    let user = CoreDataManager().getMainUser()
-    print(user.name)
-    CoreDataManager().updateUser(with: "123")
-    print(user.name)
-
+    if let translations = CoreDataManager().getTranslationHistory() {
+      print(translations[0].sourceText)
+    }
   }
 
   @IBAction func swapLanguageButtonTapped(_ sender: UIButton) {
@@ -38,6 +36,14 @@ final class HomeViewController: UIViewController {
   @IBAction func targetLanguageButtonTapped(_ sender: UIButton) {
     presenter.goToLanguageSelectionScreen(from: self)
     print("target")
+    CoreDataManager().saveTranslate(translation: Translation(
+      sourceLanguage: Language(name: "Russian", key: "rus"),
+      targetLanguage: Language(name: "Erzian", key: "myv"),
+      sourceText: "Привет",
+      targetText: "Шумбрат",
+      date: Date(),
+      isFavourite: true
+    ))
   }
 
   @IBAction func translateButtonTapped(_ sender: UIButton) {

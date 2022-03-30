@@ -2,20 +2,20 @@ import Foundation
 
 protocol StorageManagerProtocol {
   // get
-  func getListOfLanguages() -> [LanguageProtocol]
-  func getUsersSourceLanguage() -> LanguageProtocol?
-  func getUsersTargetLanguage() -> LanguageProtocol?
+  func getListOfLanguages() -> [Language]
+  func getUsersSourceLanguage() -> Language?
+  func getUsersTargetLanguage() -> Language?
 
   // save
-  func saveUsersSourceLanguage(sourceLanguage: LanguageProtocol)
-  func saveUsersTargetLanguage(targetLanguage: LanguageProtocol)
-  func addToHistory(tranlation: TranslationProtocol)
+  func saveUsersSourceLanguage(sourceLanguage: Language)
+  func saveUsersTargetLanguage(targetLanguage: Language)
+  func addToHistory(tranlation: Translation)
 }
 
 class StorageManager: StorageManagerProtocol {
   // get
-  func getListOfLanguages() -> [LanguageProtocol] {
-    let languages: [LanguageProtocol] = [
+  func getListOfLanguages() -> [Language] {
+    let languages: [Language] = [
       Language(name: "Русский", key: "rus"),
       Language(name: "Эрзянский", key: "myv")
     ]
@@ -23,20 +23,20 @@ class StorageManager: StorageManagerProtocol {
     return languages
   }
 
-  func getUsersSourceLanguage() -> LanguageProtocol? {
+  func getUsersSourceLanguage() -> Language? {
     let languageObject = UserDefaults.standard.object(forKey: "sourceLanguage")
     guard let languageObject = languageObject else { return nil }
-    if let language = languageObject as? LanguageProtocol {
+    if let language = languageObject as? Language {
       return language
     } else {
       return nil
     }
   }
 
-  func getUsersTargetLanguage() -> LanguageProtocol? {
+  func getUsersTargetLanguage() -> Language? {
     let languageObject = UserDefaults.standard.object(forKey: "targetLanguage")
     guard let languageObject = languageObject else { return nil }
-    if let language = languageObject as? LanguageProtocol {
+    if let language = languageObject as? Language {
       return language
     } else {
       return nil
@@ -44,15 +44,15 @@ class StorageManager: StorageManagerProtocol {
   }
 
   // save
-  func saveUsersSourceLanguage(sourceLanguage: LanguageProtocol) {
+  func saveUsersSourceLanguage(sourceLanguage: Language) {
     UserDefaults.standard.set(sourceLanguage, forKey: "sourceLanguage")
   }
 
-  func saveUsersTargetLanguage(targetLanguage: LanguageProtocol) {
+  func saveUsersTargetLanguage(targetLanguage: Language) {
     UserDefaults.standard.set(targetLanguage, forKey: "targetLanguage")
   }
 
-  func addToHistory(tranlation: TranslationProtocol) {
+  func addToHistory(tranlation: Translation) {
     UserDefaults.standard.set(tranlation, forKey: "history")
   }
 }

@@ -6,12 +6,12 @@ protocol SavedViewProtocol: AnyObject {
 protocol SavedViewPresenterProtocol: AnyObject {
   init(view: SavedViewProtocol)
 
-  var dataSource: [TranslationProtocol] { get set }
+  var dataSource: [Translation] { get set }
 }
 
 final class SavedPresenter: SavedViewPresenterProtocol {
   weak var view: SavedViewProtocol?
-  var dataSource: [TranslationProtocol] = [
+  var dataSource: [Translation] = [
     Translation(
       sourceLanguage: Language(name: "Erzian", key: "myv"),
       targetLanguage: Language(name: "Russian", key: "rus"),

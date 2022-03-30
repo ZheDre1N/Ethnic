@@ -6,7 +6,7 @@ protocol LanguageSelectionViewProtocol: AnyObject {
 protocol LanguageSelectionViewPresenterProtocol: AnyObject {
   init(view: LanguageSelectionViewProtocol)
 
-  var dataSource: [LanguageProtocol] { get }
+  var dataSource: [Language] { get }
 }
 
 final class LanguageSelectionPresenter: LanguageSelectionViewPresenterProtocol {

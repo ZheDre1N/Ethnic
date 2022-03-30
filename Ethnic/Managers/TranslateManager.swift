@@ -92,7 +92,7 @@ class TranslateManager: TranslateManagerProtocol {
     task.resume()
   }
 
-  private func addToHistory(translate: TranslationProtocol) {
+  private func addToHistory(translate: Translation) {
     StorageManager().addToHistory(tranlation: translate)
   }
 }
