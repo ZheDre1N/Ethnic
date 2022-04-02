@@ -29,10 +29,10 @@ class SavedTableViewCell: UITableViewCell {
 }
 
 extension SavedTableViewCell {
-  func configureCellData(with model: Translation) {
-    self.sourceLanguageLabel.text = model.sourceLanguage.name
+  func configureCellData(with model: TranslationMO) {
+    self.sourceLanguageLabel.text = model.sourceLanguage?.name
     self.sourceTextLabel.text = model.sourceText
-    self.targetLanguageLabel.text = model.targetLanguage.name
+    self.targetLanguageLabel.text = model.targetLanguage?.name
     self.targetTextLabel.text = model.targetText
   }
 }

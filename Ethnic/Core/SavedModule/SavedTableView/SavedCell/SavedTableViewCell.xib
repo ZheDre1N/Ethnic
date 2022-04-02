@@ -72,7 +72,7 @@
                 <outlet property="targetLanguageLabel" destination="w2b-3k-Zei" id="Ja7-nZ-4kW"/>
                 <outlet property="targetTextLabel" destination="iHe-sf-7qV" id="A6l-Oy-s0R"/>
             </connections>
-            <point key="canvasLocation" x="42.753623188405797" y="222.65625"/>
+            <point key="canvasLocation" x="44" y="259"/>
         </tableViewCell>
     </objects>
     <resources>

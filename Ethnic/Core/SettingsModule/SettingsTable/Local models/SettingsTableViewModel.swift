@@ -89,7 +89,9 @@ struct SettingsTableViewModel {
     Section(title: nil, cells: [
       .defaultCell(model: DefaultCell(
         title: "Clear Translation History",
-        handler: nil
+        handler: {
+          CoreDataManager().removeTranslationHistory()
+        }
       ))
     ])
   ]

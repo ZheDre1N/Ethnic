@@ -31,18 +31,8 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-is-5Jx">
                     <rect key="frame" x="16" y="52" width="382" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L32-nQ-FJY">
-                            <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
-                            <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
-                            <color key="tintColor" name="ethnicBlue"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Эрзянский"/>
-                            <connections>
-                                <action selector="targetLanguageButtonTapped:" destination="-1" eventType="touchUpInside" id="mub-W1-xPG"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7e-4h-NJ1">
-                            <rect key="frame" x="199" y="0.0" width="183" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
                             <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Русский">
@@ -50,6 +40,16 @@
                             </buttonConfiguration>
                             <connections>
                                 <action selector="sourceLanguageButtonTapped:" destination="-1" eventType="touchUpInside" id="xoO-Pf-1tK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L32-nQ-FJY">
+                            <rect key="frame" x="199" y="0.0" width="183" height="40"/>
+                            <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                            <color key="tintColor" name="ethnicBlue"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Эрзянский"/>
+                            <connections>
+                                <action selector="targetLanguageButtonTapped:" destination="-1" eventType="touchUpInside" id="mub-W1-xPG"/>
                             </connections>
                         </button>
                     </subviews>

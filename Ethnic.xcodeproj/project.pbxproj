@@ -27,6 +27,7 @@
 		DFA3F0F427F434DE0056F50F /* LanguageMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3F0F027F434DE0056F50F /* LanguageMO+CoreDataProperties.swift */; };
 		DFA3F0F627F44EC00056F50F /* SavedViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3F0F527F44EC00056F50F /* SavedViewController+UITableViewDelegate.swift */; };
 		DFA3F0F827F44EE90056F50F /* SavedViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3F0F727F44EE90056F50F /* SavedViewController+UITableViewDataSource.swift */; };
+		DFA3F0FA27F4A8AA0056F50F /* SavedFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA3F0F927F4A8AA0056F50F /* SavedFetchedResultsController.swift */; };
 		DFA7D05027E65C7F0021C1BE /* AuthorizedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7D04F27E65C7F0021C1BE /* AuthorizedCoordinator.swift */; };
 		DFA7D05327E6617D0021C1BE /* AppCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7D05227E6617D0021C1BE /* AppCoordinatable.swift */; };
 		DFA7D05927E678EC0021C1BE /* ChildCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7D05827E678EC0021C1BE /* ChildCoordinatable.swift */; };
@@ -84,6 +85,7 @@
 		DFA3F0F027F434DE0056F50F /* LanguageMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DFA3F0F527F44EC00056F50F /* SavedViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		DFA3F0F727F44EE90056F50F /* SavedViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		DFA3F0F927F4A8AA0056F50F /* SavedFetchedResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedFetchedResultsController.swift; sourceTree = "<group>"; };
 		DFA7D04F27E65C7F0021C1BE /* AuthorizedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedCoordinator.swift; sourceTree = "<group>"; };
 		DFA7D05227E6617D0021C1BE /* AppCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatable.swift; sourceTree = "<group>"; };
 		DFA7D05827E678EC0021C1BE /* ChildCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinatable.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		DFCE9A3327E7581A0014F323 /* SavedCell */ = {
 			isa = PBXGroup;
 			children = (
+				DFA3F0F927F4A8AA0056F50F /* SavedFetchedResultsController.swift */,
 				DFCE9A3727E7609F0014F323 /* SavedTableViewCell.swift */,
 				DFCE9A3827E7609F0014F323 /* SavedTableViewCell.xib */,
 			);
@@ -533,6 +536,7 @@
 				DFC54C0A27B2B18B007B0EAA /* APIDataModel.swift in Sources */,
 				DFA3F0F227F434DE0056F50F /* TranslationMO+CoreDataProperties.swift in Sources */,
 				DFF496D927B0487D00EBF4C9 /* SettingsCoordinator.swift in Sources */,
+				DFA3F0FA27F4A8AA0056F50F /* SavedFetchedResultsController.swift in Sources */,
 				DFF496E227B06B2000EBF4C9 /* HomeViewController.swift in Sources */,
 				DFC610F027E9CB4200E4F753 /* ProfileTableViewCell.swift in Sources */,
 				DFC3433227B1014600F1D160 /* SettingsPresenter.swift in Sources */,
