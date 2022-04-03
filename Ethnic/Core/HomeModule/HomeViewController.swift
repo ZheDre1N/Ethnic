@@ -33,14 +33,18 @@ final class HomeViewController: UIViewController {
   @IBAction func targetLanguageButtonTapped(_ sender: UIButton) {
     presenter.goToLanguageSelectionScreen(from: self)
     print("target")
-    CoreDataManager().saveTranslate(translation: Translation(
-      sourceLanguage: Language(name: "Russian", key: "rus"),
-      targetLanguage: Language(name: "Erzian", key: "myv"),
-      sourceText: "Привет",
-      targetText: "Шумбрат",
-      date: Date(),
-      isFavourite: true
-    ))
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+      print("added to coredata")
+      CoreDataManager().saveTranslate(translation: Translation(
+        sourceLanguage: Language(name: "Russian", key: "rus"),
+        targetLanguage: Language(name: "Erzian", key: "myv"),
+        sourceText: "Привет",
+        targetText: "Шумбрат",
+        date: Date.now,
+        isFavourite: true
+      ))
+    }
   }
 
   @IBAction func translateButtonTapped(_ sender: UIButton) {

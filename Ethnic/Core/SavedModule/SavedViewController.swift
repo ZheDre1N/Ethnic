@@ -21,7 +21,7 @@ final class SavedViewController: UIViewController {
     tableView.register(UINib(nibName: "SavedTableViewCell", bundle: nil), forCellReuseIdentifier: "SavedTableViewCell")
 
     // Core data
-    let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+    let sortDescriptor = NSSortDescriptor(key: #keyPath(TranslationMO.date), ascending: true)
     let fetchRequest: NSFetchRequest<TranslationMO> = TranslationMO.fetchRequest()
     fetchRequest.fetchLimit = 15
     fetchRequest.sortDescriptors = [sortDescriptor]
@@ -85,6 +85,7 @@ extension SavedViewController: NSFetchedResultsControllerDelegate {
     switch type {
     case .insert:
       if let indexPath = indexPath {
+        print("runtime row was added")
         tableView.insertRows(at: [indexPath], with: .automatic)
       }
     case .delete:
@@ -94,7 +95,17 @@ extension SavedViewController: NSFetchedResultsControllerDelegate {
     case .update:
       break
     @unknown default:
-      break
+      showAlert(title: "Fatal error", message: "123")
     }
+  }
+}
+
+extension SavedViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("\(indexPath.row) was tapped")
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return UITableView.automaticDimension
   }
 }

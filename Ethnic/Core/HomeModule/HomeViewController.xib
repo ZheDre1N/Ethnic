@@ -21,13 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter the text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-7b-Yzf" userLabel="Soure Text View">
-                    <rect key="frame" x="0.0" y="100" width="414" height="796"/>
-                    <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
-                    <color key="textColor" systemColor="placeholderTextColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-is-5Jx">
                     <rect key="frame" x="16" y="52" width="382" height="40"/>
                     <subviews>
@@ -68,19 +61,41 @@
                     <state key="normal" title="" image="mic.circle.fill" catalog="system"/>
                     <buttonConfiguration key="configuration" style="plain" image="mic.circle.fill" catalog="system" title=""/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFo-54-Mk3">
+                    <rect key="frame" x="107.5" y="368" width="199" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="199" id="Vlu-uz-9Am"/>
+                        <constraint firstAttribute="height" constant="49" id="iDG-MV-hyV"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button">
+                        <color key="baseBackgroundColor" name="ethnicBlue"/>
+                    </buttonConfiguration>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter the text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-7b-Yzf" userLabel="Soure Text View">
+                    <rect key="frame" x="16" y="100" width="382" height="260"/>
+                    <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="WH9-q5-msc"/>
+                    </constraints>
+                    <color key="textColor" systemColor="placeholderTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="f0h-7b-Yzf" secondAttribute="trailing" id="74Y-hW-urZ"/>
+                <constraint firstAttribute="trailing" secondItem="f0h-7b-Yzf" secondAttribute="trailing" constant="16" id="74Y-hW-urZ"/>
                 <constraint firstItem="q8d-is-5Jx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="7wN-cc-vXp"/>
                 <constraint firstItem="q8d-is-5Jx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JrF-fU-wcE"/>
-                <constraint firstItem="f0h-7b-Yzf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bdV-kk-50E"/>
+                <constraint firstItem="f0h-7b-Yzf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="bdV-kk-50E"/>
                 <constraint firstItem="BKQ-r3-8aX" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="csb-2a-YCB"/>
                 <constraint firstItem="f0h-7b-Yzf" firstAttribute="top" secondItem="q8d-is-5Jx" secondAttribute="bottom" constant="8" id="dm2-Rp-rsy"/>
+                <constraint firstItem="BFo-54-Mk3" firstAttribute="top" secondItem="f0h-7b-Yzf" secondAttribute="bottom" constant="8" id="doO-tV-CV5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="q8d-is-5Jx" secondAttribute="trailing" constant="16" id="oNo-wQ-1iC"/>
-                <constraint firstAttribute="bottom" secondItem="f0h-7b-Yzf" secondAttribute="bottom" id="tSq-V3-0Rw"/>
                 <constraint firstItem="BKQ-r3-8aX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="udS-Ez-iqs"/>
+                <constraint firstItem="BFo-54-Mk3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wLA-0S-4EV"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
